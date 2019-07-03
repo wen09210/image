@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Responsive tables</title>
+
+
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+        <!-- Responsive Tables -->
+        <link rel="stylesheet" href="css/rwd-table.min.css?v=5.3.1">
+        <link rel="stylesheet" href="css/docs.min.css?v=5.3.1">
+
+        <style>
+            #demo th{
+               
+                    color: #785013;
+    text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+                font-size: 12px;
+                text-align: center;
+            }
+            td{
+                text-align: center;
+            }
+           table.table-striped>tbody>tr:nth-child(odd)>td, table.table-striped>tbody>tr:nth-child(odd)>th {
+            background: #fcf8eb;
+            }
+
+            #demo2 th{
+                display: table-cell;
+                position: sticky;
+                left: 0;
+                background: #eacf80;
+                    color: #785013;
+                    text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+                    
+            }
+        </style>
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="50">
+
+  
+
+        <section id="demo">
+            <div class="container">
+                <div class="page-header">
+                    <h2>活期存款 - 直向，可用滾軸滑動</h2>
+                </div>
+                <div data-responsive-table-toolbar="tech-companies-1"></div>
+                <div class="table-responsive" data-pattern="priority-columns">
+                    <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered table-striped">
+                        
+                        
+                         <thead>
+                             <tr>
+                                 <!-- <th data-priority="1"></th> -->
+                                 <th>期數/展期方式</th>
+                                 <th >定存帳號</th>
+                                 <th >所屬分行</th>
+                                 <th >幣別</th>
+                                 <th >存單面額</th>
+                                 <th>折合新臺幣參考現值</th>
+                                 <th >開戶日期</th>
+                                 <th >到期日期</th>
+                             </tr>
+                         </thead>
+                        <tbody>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本利續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">001235121448</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">館前分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,214.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">99,055</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/18</td>
+                  
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本利續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">001235121464</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">館前分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">土耳其里拉 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>6,611.26</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">35,906</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/06/17</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">24/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174352</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,311.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">40,405</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2018/12/10</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/12/10</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/到期不展期 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174361</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,111.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">34,241</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2018/12/10</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/12/10</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174395</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">歐元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>100,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">3,459,000</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/11</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/01/11</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">24/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174417</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">30,820</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/21</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2021/01/21</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">36/到期不展期 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174425</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">30,820</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/22</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2022/01/22</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">36/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174433</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">308,200</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/22</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2022/01/22</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174506</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,070</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/06/17</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019643</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,231.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">37,939</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/18</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019651</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>2,154.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">66,386</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/07/31</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019660</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>30,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">924,600</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/31</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019678</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,070</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/18</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本利續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019686</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>20,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">88,140</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/07/18</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">06/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019694</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,214.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">99,055</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/18</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">00/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019708</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>30,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">924,600</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/04/25</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019716</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,010.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,114</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/31</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/按月利息轉存本金到期不展期 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019767</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,180.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">98,008</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/04/26</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019775</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,200.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">36,984</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/06/26</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/按月利息轉存本金到期不展期 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019783</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>5,280.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">162,730</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/01</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019791</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,070</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/01</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019805</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">92,460</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/27</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本利續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019813</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">南非幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>30,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">62,760</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/08/17</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期不展期 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019821</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">澳幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">66,360</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/08/17</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本金續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019830</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">澳幣 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">66,360</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/08/17</td>
+                </tr>
+                <tr class="even-ie">
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">00/到期不展期 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019848</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,500.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">46,230</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/20</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/25</td>
+                </tr>
+                <tr>
+                    <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/按月利息轉存本金到期續存 </td>
+                    <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019864</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                    <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                    <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,000.00</span></td>
+                    <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">30,820</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/06/25</td>
+                    <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/06/25</td>
+                </tr>
+                <tr>
+                    <td rowspan=6 colspan="1" data-title="" class="textR">各幣別合計</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="幣別" class="textC">美元 </td>
+                    <td data-title="存單結存金額" class="textR">99,395.00</td>
+                    <td data-title="折合新臺幣參考現值" class="textR">3,063,354</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                </tr>
+                <tr>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="幣別" class="textC">土耳其里拉 </td>
+                    <td data-title="存單結存金額" class="textR">6,611.26</td>
+                    <td data-title="折合新臺幣參考現值" class="textR">35,906</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                </tr>
+                <tr>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="幣別" class="textC">歐元 </td>
+                    <td data-title="存單結存金額" class="textR">100,000.00</td>
+                    <td data-title="折合新臺幣參考現值" class="textR">3,459,000</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                </tr>
+                <tr>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="幣別" class="textC">人民幣 </td>
+                    <td data-title="存單結存金額" class="textR">60,010.00</td>
+                    <td data-title="折合新臺幣參考現值" class="textR">264,464</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                </tr>
+                <tr>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="幣別" class="textC">南非幣 </td>
+                    <td data-title="存單結存金額" class="textR">30,000.00</td>
+                    <td data-title="折合新臺幣參考現值" class="textR">62,760</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                </tr>
+                <tr>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="幣別" class="textC">澳幣 </td>
+                    <td data-title="存單結存金額" class="textR">6,000.00</td>
+                    <td data-title="折合新臺幣參考現值" class="textR">132,720</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                </tr>
+                <tr>
+                    
+                    <td  data-title="" class="textR">折合新臺幣參考現值總合計</td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="" class="textC"></td>
+                    <td data-title="折合新臺幣參考現值總合計" class="textR">7,018,202</td>
+                </tr>
+            </tbody>
+                    </table>
+                </div>
+                <br>
+                <br>
+
+            </div> <!-- end container -->
+        </section> <!-- end section -->
+
+         <section id="demo2">
+             <div class="container">
+                 <div class="page-header">
+                     <h2>活期存款 - 橫向，滾軸式</h2>
+                 </div>
+                 <div data-responsive-table-toolbar="tech-companies-2"></div>
+                 <div class="table-responsive" data-pattern="priority-columns">
+                     <table cellspacing="0" id="tech-companies-2"
+                         class="table table-small-font table-bordered table-striped">
+                         <thead>
+                             <tr>
+                                 <th data-priority="1">期數/展期方式</th>
+                                <th data-priority="2">定存帳號</th>
+                                 <th data-priority="1">所屬分行</th>
+                                 <th data-priority="1">幣別</th>
+                                 <th data-priority="1">存單面額</th>
+                                 <th data-priority="">折合新臺幣參考現值</th>
+                                 <th data-priority="1">開戶日期</th>
+                                 <th data-priority="1">到期日期</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本利續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">001235121448</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">館前分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,214.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">99,055</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/18</td>
+                               
+                             </tr>
+                             <tr class="even-ie">
+                                  
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本利續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">001235121464</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">館前分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">土耳其里拉 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>6,611.26</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">35,906</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/06/17</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">24/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174352</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,311.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">40,405</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2018/12/10</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/12/10</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/到期不展期 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174361</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,111.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">34,241</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2018/12/10</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/12/10</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174395</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">歐元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>100,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">3,459,000</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/11</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/01/11</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">24/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174417</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">30,820</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/21</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2021/01/21</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">36/到期不展期 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174425</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">30,820</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/22</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2022/01/22</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">36/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174433</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">308,200</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/01/22</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2022/01/22</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">002238174506</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">環球交易服務部</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,070</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/06/17</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019643</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,231.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">37,939</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/18</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019651</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>2,154.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">66,386</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/07/31</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019660</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>30,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">924,600</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/31</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019678</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,070</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/18</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本利續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019686</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>20,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">88,140</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/07/18</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">06/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019694</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,214.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">99,055</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/18</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">00/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019708</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>30,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">924,600</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/04/25</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019716</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,010.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,114</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/18</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/31</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/按月利息轉存本金到期不展期 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019767</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,180.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">98,008</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/04/26</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">01/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019775</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,200.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">36,984</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/06/26</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/按月利息轉存本金到期不展期 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019783</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>5,280.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">162,730</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/01</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019791</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">人民幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>10,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">44,070</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/04/26</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/01</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019805</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">92,460</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/10/27</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本利續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019813</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">南非幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>30,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">62,760</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/08/17</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期不展期 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019821</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">澳幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">66,360</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/08/17</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">03/到期展期,且本金續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019830</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">澳幣 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>3,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">66,360</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/17</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/08/17</td>
+                             </tr>
+                             <tr class="even-ie">
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">00/到期不展期 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019848</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,500.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">46,230</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/05/20</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2019/05/25</td>
+                             </tr>
+                             <tr>
+                                 <td Class="fix-width-24" class="textC" data-title="期數/展期方式">12/按月利息轉存本金到期續存 </td>
+                                 <td Class="fix-width-12 textC" class="textC" data-title="定存帳號">062630019864</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="所屬分行">大同分行</td>
+                                 <td Class="fix-width-06 textC" class="textC" data-title="幣別">美元 </td>
+                                 <td Class="fix-width-14 textR" class="textC" data-title="存單面額"><span>1,000.00</span>
+                                 </td>
+                                 <td Class="fix-width-14 textR" class="textR" data-title="折合新臺幣參考現值">30,820</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="開戶日期">2019/06/25</td>
+                                 <td Class="fix-width-10 textC" class="textC" data-title="到期日期">2020/06/25</td>
+                             </tr>
+                             <tr>
+                                 <td rowspan=8 colspan="1" data-title="" class="textR">各幣別合計</td>
+                             </tr>
+                             <tr>
+                                 
+                                 <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                 <td data-title="幣別" class="textC">美元 </td>
+                                 <td data-title="存單結存金額" class="textR">99,395.00</td>
+                                 <td data-title="折合新臺幣參考現值" class="textR">3,063,354</td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                             </tr>
+                             <tr>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                 <td data-title="幣別" class="textC">土耳其里拉 </td>
+                                 <td data-title="存單結存金額" class="textR">6,611.26</td>
+                                 <td data-title="折合新臺幣參考現值" class="textR">35,906</td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                             </tr>
+                             <tr>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                 <td data-title="幣別" class="textC">歐元 </td>
+                                 <td data-title="存單結存金額" class="textR">100,000.00</td>
+                                 <td data-title="折合新臺幣參考現值" class="textR">3,459,000</td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                             </tr>
+                             <tr>
+                                 <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="幣別" class="textC">人民幣 </td>
+                                 <td data-title="存單結存金額" class="textR">60,010.00</td>
+                                 <td data-title="折合新臺幣參考現值" class="textR">264,464</td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                             </tr>
+                             <tr>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                 <td data-title="幣別" class="textC">南非幣 </td>
+                                 <td data-title="存單結存金額" class="textR">30,000.00</td>
+                                 <td data-title="折合新臺幣參考現值" class="textR">62,760</td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                             </tr>
+                             <tr>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                 <td data-title="幣別" class="textC">澳幣 </td>
+                                 <td data-title="存單結存金額" class="textR">6,000.00</td>
+                                 <td data-title="折合新臺幣參考現值" class="textR">132,720</td>
+                                 <td data-title="" class="textC"></td>
+                                 <td data-title="" class="textC"></td>
+                             </tr>
+                            
+                            <tr>
+                                <td data-title="" class="textR">折合新臺幣參考現值總合計</td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="" class="textC"></td>
+                                <td data-title="折合新臺幣參考現值總合計">7,018,202</td>
+                            </tr>
+                         </tbody>
+                     </table>
+                 </div>
+                 <br>
+                 <br>
+
+             </div> <!-- end container -->
+         </section> <!-- end section -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <script src="js/rwd-table.js?v=5.3.1"></script>
+        <script>
+            $(function() {
+                $('#bs-deps').on('hide.bs.collapse show.bs.collapse', function () {
+                    $('#bs-deps-toggle').children('span').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
+                })
+            });
+        </script>
+               <script>
+                   $(function () {
+                       $("#tech-companies-2").each(function () {
+                           var $this = $(this);
+                           var newTitle =[];
+                           var newrows = [];
+                           $this.find(" tr").each(function () {
+                               var i = 0;
+                               $(this).find("th").each(function () {
+                               i++;
+                               if (newrows[i] === undefined) {
+                               newrows[i] = $("<tr></tr>");
+                               }
+                               newrows[i].append($(this));
+                               });
+                               $(this).find("td").each(function () {
+                                   i++;
+                                   if (newrows[i] === undefined) {
+                                       newrows[i] = $("<tr></tr>");
+                                   }
+                                   newrows[i].append($(this));
+                               });
+                           });
+                           
+                           $this.find("tbody tr ").remove();
+                           $.each(newrows, function () {
+                               $this.append(this);
+                           });
+               
+                       });
+
+                       return false;
+                   });
+               </script>
+    </body>
+</html>
