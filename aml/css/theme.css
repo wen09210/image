@@ -1,0 +1,31 @@
+/* Component containers
+----------------------------------*/
+#calendar .ui-widget-content { border: 1px solid #dddddd; background: #f2f5f7 url(images/ui-bg_highlight-hard_100_f2f5f7_1x100.png) 50% top repeat-x; color: #362b36; }
+#calendar .ui-widget-content a { color: #362b36; }
+#calendar .ui-widget-header { border: 1px solid #dddddd; border-bottom: 1px solid #cccccc; background: #d5d7d9 url(images/ui-bg_highlight-soft_100_d5d7d9_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
+#calendar .ui-widget-header a { color: #222222; }
+
+
+/* Interaction states
+----------------------------------*/
+#calendar .ui-state-default, #calendar .ui-widget-content .ui-state-default, #calendar .ui-widget-header .ui-state-default { border: 1px solid #ccc; background: #d1d3d5 url(images/ui-bg_glass_80_d1d3d5_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #777; }
+#calendar .ui-state-default a, #calendar .ui-state-default a:link, #calendar .ui-state-default a:visited { color: #777; text-decoration: none; }
+#calendar .ui-state-hover, #calendar .ui-widget-content .ui-state-hover, #calendar .ui-widget-header .ui-state-hover, #calendar .ui-state-focus, #calendar .ui-widget-content .ui-state-focus, #calendar .ui-widget-header .ui-state-focus { border: 1px solid #aaa; background: #c8c8c8 url(images/ui-bg_glass_100_c8c8c8_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #333; }
+#calendar .ui-state-hover a, #calendar .ui-state-hover a:hover { color: #333; text-decoration: none; }
+#calendar .ui-state-active, #calendar .ui-widget-content .ui-state-active, #calendar .ui-widget-header .ui-state-active { border: 1px solid #999; background: #a4a4a4 url(images/ui-bg_glass_50_a4a4a4_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #ffffff; }
+#calendar .ui-state-active a, #calendar .ui-state-active a:link, #calendar .ui-state-active a:visited { color: #ffffff; text-decoration: none; }
+#calendar .ui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+#calendar .ui-state-highlight, #calendar .ui-widget-content .ui-state-highlight, #calendar .ui-widget-header .ui-state-highlight  {border: 1px solid #f9dd34; background: #ffef8f url(images/ui-bg_highlight-soft_25_ffef8f_1x100.png) 50% top repeat-x; color: #363636; }
+#calendar .ui-state-highlight a, #calendar .ui-widget-content .ui-state-highlight a, #calendar .ui-widget-header .ui-state-highlight a { color: #363636; }
+#calendar .ui-state-error, #calendar .ui-widget-content .ui-state-error, #calendar .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #cd0a0a url(images/ui-bg_flat_15_cd0a0a_40x100.png) 50% 50% repeat-x; color: #ffffff; }
+#calendar .ui-state-error a, #calendar .ui-widget-content .ui-state-error a, #calendar .ui-widget-header .ui-state-error a { color: #ffffff; }
+#calendar .ui-state-error-text, #calendar .ui-widget-content .ui-state-error-text, #calendar .ui-widget-header .ui-state-error-text { color: #ffffff; }
+#calendar .ui-priority-primary, #calendar .ui-widget-content .ui-priority-primary, #calendar .ui-widget-header .ui-priority-primary { font-weight: bold; }
+#calendar .ui-priority-secondary, #calendar .ui-widget-content .ui-priority-secondary, #calendar .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+#calendar .ui-state-disabled, #calendar .ui-widget-content .ui-state-disabled, #calendar .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+#calendar td.fc-sun {background: #fedee1;}
+#calendar td.fc-sat {background: #e6ffce;}
