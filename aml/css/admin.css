@@ -1,0 +1,20 @@
+/* # Admin styles
+================================================== */
+.adminTitle { font-size: 26px; position:absolute; top: 35px; left: 280px; color:#999; }
+ul.titleToolbar li a.expand { margin-right:0px;}
+.datepicker { width: 120px!important; display: inline-block; margin-right: 18px;}
+.disabled { opacity: 0.4; filter: alpha(opacity=40);}
+
+/* ===== Spinner ===== */
+
+.ui-spinner { width: 5em; display: inline-block; position: relative; vertical-align:bottom; overflow: hidden; border: 1px solid #d7d7d7; background: #fdfdfd; height: 26px; padding: 2px 6px; box-shadow: 0 1px 0 #fff; -webkit-box-shadow: 0 1px 0 #fff; -moz-box-shadow: 0 1px 0 #fff; }
+.ui-spinner:focus { border: 1px solid #999!important; }
+.ui-spinner-disabled { background: #F4F4F4; color: #CCC; }
+.ui-spinner input.ui-spinner-box { border: none!important; background: none!important; padding: 0!important; height: 26px; }
+.ui-spinner-up, .ui-spinner-down { width: 18px; padding: 0; margin: 0; z-index:2; position: absolute; right: 0; cursor: pointer; border: none; }
+.ui-spinner-up { background: url(../images/spinnerTop.png) no-repeat; height: 16px; top: -1px; }
+.ui-spinner-down { height: 16px; bottom: -1px; background: url(../images/spinnerBottom.png) no-repeat; }
+.ui-spinner-pressed {  }
+.ui-spinner-list, .ui-spinner-listitem { margin: 0; padding: 0; font-size: 11px; }
+.ui-spinner ul li, .ui-spinner-data { line-height: 26px; height: 26px; }
+

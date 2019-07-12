@@ -1,0 +1,30 @@
+/* # Responsive styles for IE
+================================================== */
+
+@media only screen and (max-width: 767px) {
+.tDefault table, .tDefault thead, .tDefault tbody , .tDefault tr{ display: block; float: left; width: 100%;}
+.tDefault th { display: block; float: left; width: 55%;}
+.tDefault td { display: block; float: left; width: 55%;}
+
+.ie7 .moreServices { margin-top: -20px; background: #333;}
+.ie7 #mobile-submenu{ margin-top: -20px; background: #fff;}
+
+.ie7 .dataRow { height: 50px;}
+
+.ie7 .bannersHolderAlt{ width: 99.7%;}
+
+
+.ie7 .widget .tableHolder,.ie7 #lightbox-wrapper .tableHolder { overflow: auto; }
+.ie7 .tDefault { width: 600px;}
+.ie7 .tDefault tbody td { padding: 0; }
+.ie7 .tDefault table, .tDefault thead, .tDefault tbody, .tDefault th, .tDefault td, .tDefault tr { display: table;}
+.ie7 .tDefault thead tr { position: relative; top: 0px; left: 0px; width: auto;display:table-cell;}
+.ie7 .tDefault tbody td, .tDefault thead td { border-left: 1px solid #dfdfdf; width: auto; display:table-cell;}
+.ie7 .tDefault tbody tr { border-top: none;}
+.ie7 .tDefault tbody tr:first-child { border-top: none; }
+.ie7 .tDefault tr { border-top: none;}
+.ie7 .tDefault td { border: none; position: relative; text-align:left; border-bottom: 1px solid #dfdfdf;; word-wrap: break-word; word-break: break-all; }
+.ie7 .tDefault td:before {}
+.ie7 .tDefault td:before { content:normal;}
+.ie7 .tDefault thead td {  border-left: 1px solid #fff; }
+}

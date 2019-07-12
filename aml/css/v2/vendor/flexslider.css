@@ -1,0 +1,284 @@
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+/* line 15, ../../../sass/v2/vendor/flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 19, ../../../sass/v2/vendor/flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 27, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 28, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 29, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 30, ../../../sass/v2/vendor/flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 33, ../../../sass/v2/vendor/flexslider.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 34, ../../../sass/v2/vendor/flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 35, ../../../sass/v2/vendor/flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 40, ../../../sass/v2/vendor/flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 44, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  position: relative;
+  zoom: 1;
+}
+
+/* line 45, ../../../sass/v2/vendor/flexslider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 46, ../../../sass/v2/vendor/flexslider.scss */
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+/* line 47, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 48, ../../../sass/v2/vendor/flexslider.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* Direction Nav */
+/* line 51, ../../../sass/v2/vendor/flexslider.scss */
+.flex-direction-nav {
+  *height: 0;
+}
+
+/* line 52, ../../../sass/v2/vendor/flexslider.scss */
+.flex-direction-nav a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
+/* line 53, ../../../sass/v2/vendor/flexslider.scss */
+.flex-direction-nav .flex-prev {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAEtUlEQVRYw81YS0scWRRuX226O23obh8JtuIkkF1eTCRCGJgZzCIizLgYF2MmIUEUwsCIICQkDMlSMTqzSPwVk4WO0xNxodAgvVAXHXwh6MayXYmval/dd75Tc6q5XWp19UvS8EFTde/5vvrOuedWXVtBYaEtQxRYREbxMxVTyChiFBugX9fHafOEEDYjshWWEPTm7Vv75ubmnWg0+vPR0dHLWCzWD4L3BPpP1+ieoihft7a2OiShpwrMRpgmKBgMug8ODn4A+TsEDABhIAKowDFD5Wt0L4CxA9vb2y0fhoY8iFEiC8xGmO5S0dbWVgO5EY/HQ4AKCIugsSGau7a2dh+xSiUHTWvQ1KXOzs4SuPQITzYOAiUNQUYoFAPuPblbX+80umdVWELU4eHhcwQNZiHIiKCqqr/eun3bBQ67mbizhBWhgNsoENIgcgmKicXzBBxOSVxKYXpN3UOAcQSK51oYxaTYi4uL34DLIaW14CxhWgr/CQTKaOUdHx8rgMgTFLSVgZ6enkpwXuAFkZTSE27t7e39CGGhPIrSQBzr6+s/gdPFq7XoNGGaW93d3Q5yC0+jAiLPII6Bew0NPimlCdeS3KJuDWGBdElmZ2dFb2+vhsnJScvziGtqaor620Wja7owUlq8u7v7CDaH0SaEVczMzCSJSmcuuD4jnU/BXcau6bVms0mbsh1P8QIT1tFUhRXIoiYmJoTVeTrAFUFNvwK3R2ofWjoTaSQrqb4wIXoeohhRqjNw+4zpTBJGbwj7+/sxQJhheno6SVSq8SaAF7EP4C4H3KcJo9xeIGHo+DFAmGFkZEQT1dfXJxYWFkSq8SbQhVVwnek9LVkYpTL6/880IPa7hLj+/v5sxOmprDQVhpzTS16EiFMBRSuGh4cT4ubn54WVeTKIa2dn53VKYdhcH0Nc2GrgbMWB6/Pq6mq7WSq14p+bm2uAtf8SoVWg9yWJQwzLc4kLe/P3ZsWvCWtubvagzgYxSSVCq0A6BN4WNMeWlpYszSEOCBu8cfNmjVm7KOTm5qSNFcs4lI6wTEAcWDRt4Kw6q8EmtiTaFrq6uqpopeCJFHIiH6DY6PqDTU1N16T6OrElJaWTLMWm/C0KcxxB4nkQFqfYn8bGHoLrMuA128T1dJaw8kuRSOQZ7A7iA0LkEhRzZWWlAxzV7NYls9ceo2suf02ND+3jt1yKo1gbGxvdXp+vVqot0xdF2bVi7ifuar+/HO9o7QhIaVXwLSAyAc2lGHCqk0XpKXRbebWWXdNTSkXpw1f4A1oQ6NQhPHnUqiAaS3Oo0Lmm/CzKJxV8yo8Rozg7L2EK4G1paalDj6Lzij9QvAGsrDCc2AC5ChExAv2na3SPxkDQn+Fw+JfGxsbrXFNV7FRZup9vckp1cQ62nOqhoqa2tvrv0dHvaCuBmN/JDTTlIQL9p2vLy8sdf3382PjV1at1LOgyF7qHYzky+eA1iivhOnDxCvIyCT39FSb2G1DN96p4rJfnujhWRkcEJw5VuDhL+Ukvcio8XCvlTF7JqOBrPh5TxnMcuThUMXNPF+hkQjeTy3DzPackKKVLWR3cSQ7ambCU0yNDv24/7eDuizvqzOcZ7LkdDv8H5ZcMi+svbyoAAAAASUVORK5CYII=);
+  left: 10px;
+}
+
+/* line 54, ../../../sass/v2/vendor/flexslider.scss */
+.flex-direction-nav .flex-next {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAEs0lEQVRYw81YXWsTWRhOv1KTmEqSfihNi9uFvfMLVyyIoFIvLAXtxfZidRVFLMjClkLBZUXWy5ZuqxfaX6EXrRqVXrQQKLloexHpF4X2ptP0qvRr0q/k7PPOvhNOpu1kMklkAw+EmXPe55nnfc97Zo6jqLjYYRNFFmErvl0xxYwSRqkB+nV9nDZPCOEwIldhKUF/v3zpXF1dvRCPx3/d29v7M5FI9ILgDYH+0zW6pyjKxba2Npck9FCBuQjTBIXDYe/Ozs5tkP+DgCEgCsQAFdhnqHyN7oUwtm99fb317cCADzHKZIG5CNNdKllbW2skN5LJZARQAWERNDZCc5eWlq4gVrnkoGkNmrrU3t5eBpfu4cmGQaBkIcgIhWLAvQc/X7rkNrpnVVhK1O7u7lMEDecgyIiwqqq/nzt/3gMOp5m4o4SVoIDvUiCkQeQTFBOL5wE43JK4jML0mrqMAMMIlMy3MIpJsWdnZ6+CyyWltegoYVoKP4VCFbTy9vf3FUAUCAraSl9XV1c1OI/xgkhL6QG3tra27kBYpICiNBDH8vLyL+D08GotOUyY5lZnZ6eL3MLTqIAoMIij73JjY0BKacq1NLeoW0NYyGrw0dFR0d3drWFycjJrccQ1NjZG/e240TVdGCkt3dzcvAebo2gTwipGRkbSxGUzF1zfkM6H4K5g1/RaczikTdmJp3iGCctoqiIbyOImJiYszwNXDDX9F7h9UvvQ0plKI1lJ9YUJ8WyF5SAuTnUG7oAxnWnC6A1he3s7AQg7kMWNj49bmQMvEm/BXQl4DxNGuT1GwtDxE4Cwg5mZGdHT06MJGxoasjJHF1bFdab3tHRhlMr4fz9bonp7e1OisCdamaenstpUGHJOL3kxCpoNpqenU6IGBwcFCtrSPOLa2Nh4nlEYNtf7EBf9HqII4Pq2uLj42CyVWvFPTU01wtrPFNwKMD5NFPqgsDqXQFzYm2+YFb8mrKWlxYc668cklUgyYW5uTnMMbwoCKRFW5uggDgjrP3P2bJ1Zuyjm5uamjRXLOJINiR0QBxbMXXDWHNVgU1sSbQsdHR01tFLwRAq5UAhQbHT9/ubm5h+l+jqwJaWlkyzFnncNhTmMIMkCCEtS7C9fv94C10nAb7aJ6+ksY+UnYrHYI9gdxgeEyCco5sLCwhNw1LJbJ8xee4yueYJ1dQG0jz/yKY5iraysdPoDgXqptkxfFGXXSrmfeGuDwUq8oz1GQEqrgm8BYQc0l2LAqXYWpafQa+XVWnZNTykVZQBf4TdpQaBTR/DkcauCaCzNoULnmgqyqIBU8Bk/RozinLyEKYC/tbX1NPoWnVe8QvGGsLKicGIF5CpEJAj0n67RPRoDQa+j0ehvTU1NP3FN1bBTFdl+vskp1cW52HKqh6q6+vraDx8/XqetBGJekBtoygME+k/X5ufnn7x7/77ph4aG0yzoJBe6j2O57HzwGsWVcR14eAX5mYSe/hQTBw2o5Xs1PNbPcz0cy9YRwYFDFS7Ocn7S45wKH9dKJZNXM6r4WoDHVPAcVz4OVczc0wW6mdDL5DK8fM8tCcroUk4Hd5KDTiYs5/TI0K87Dzu4+98ddRbyDPa7HQ7/CxepDItiGb2LAAAAAElFTkSuQmCC);
+  right: 10px;
+}
+
+/* line 56, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider .flex-prev:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAEp0lEQVRYw81YS2sTURhNX6lJTCVJH0rT4gPc+ULFgggqdWEpaBd24RNFLIhgKRQURXTZUq0utL9CN61GpbSbQAktdBEpbelr02m66jvpK7meb/gm3EzbyeQlLg6ZzNz7nXPP9917Z64lLz/fkibyTCKt+OmKyWcUMAp10O5r7dR+QgiLHpkKiwt6++6ddWFh4UwkErm9tbX1MhqNdoDgM4Gu6R49UxTlbGNjo00SuqvATISpgvx+v3NjY+MGyN/j17e2thZcXl4OLS0thRcXF7cJdE336Bm1QdsP+N/wpavLhRhFssBMhGkuFYCwhtyAEwEQhfFfmAG1pT7Ud3Z29iJiFUsOGtagoUtNTU1FGPnd9fX13pWVFcWsID2oL8WA0Afnzp+3690zKywuanNz8ylG7E9XkB4UKxwOPzt1+rQDHFYjcXsJK0CQOxilH6MU2QTFxOR5AA67JC6pMK2mLiCFZH0s28IoJsUeGxu7BC6blNa8vYSpKfzh85XQzMPMUlAbIheg2FhWPrS2tpaDcx9PiISU7nALnW7C7kCuRGkgjrm5uVvgdPBsLdhNmOpWS0uLjd0Kr66uilyCOMi1CzU1HimlcdcS3KLVGjPRlyrJ4OCgaGtrU9HX12e6H3ENDAzQ+rZf75omjJQWojGtWUGMRpiFXlQqfcH1B+l8CO4Sdk2rNYtF2pStsPYFlok5rDXCDIaGhuKi+vv7hdl+GsBF29crcLuk5UNNZzyNZCXVFzpE/oUoRoTqDNwefToThNEbAkYRBYQR9KKStTcAvIh+AXcp4NxNGOV2n1lh3d3dqqj29nYxOjqaDWFlXGfampYojFKJgowAwgiyuI6ODlVcsj57QEtluaEwbBUvMYVD+BXJQIF7enri4rDFCDP9ZBAXFtvXSYVhc72PEQTNBs5UHLj+zMzMPDZKpVr8IyMj9EL4EyMRZkEEsrjx8XHTfYkLe/NVo+JXhdXX17vQuBMjoe1CmAWRTE1NicnJSQEHzPYjjs4TJ09WGS0X+by42WljhbhAKsLSAXFg0twBZ8VeC2x8S6Jtobm5uYJmyvb2tgKIHEGBy511dXXHpPrasSUlpJMsHR4evhyLxXoRIJYDUTGK/ev37+vgOgi4jTZxLZ1FrPxAKBR6hAB+WC6yCYo5PT39BByV7NYBo9cevWsOb1WVB8vH82yKo1jz8/Mtbo+nWqotwxdF2bVCXk+clV5vKd7RHmOr6kVQBRBpQqEYcKqJRWkpdJp5tZZd01JKRenBV/g1mhAgCACRFARR2wAVOteUl0V5pIJP+jGiF2flKUwB3A0NDYexeNJ5xUeM3gfCIDAPhIEoI8z3gtQGgj4Fg8F7tbW1x7mmKtipklQ/3+SUauJsbDnVQ1lVdXVlz/fvV2grwWfeG3ID9dNFoGu6NzEx8eTrt2+1R44ePcyCDnKhuziWLZ0PXr24Iq4DB88gN5PQ6A8xsVeHSn5WwW3d3NfBsdI6IthxqMLFWcwj3c+pcHGtlDJ5OaOM73m4TQn3sWXjUMXIPU2gnQmdTC7Dyc/skqCkLmV0cCc5aGXCYk6PDO2+dbeDu//uqDOXZ7D/7HD4L2quCMhRtRPLAAAAAElFTkSuQmCC);
+}
+
+/* line 57, ../../../sass/v2/vendor/flexslider.scss */
+.flexslider .flex-next:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAEtElEQVRYw81YS2sbVxiVX3IkRQ6S/EixbNIEskuakIYYSiAp7qLG0HpRL5o2oSXEEAo1BkNCQmiWNk6cLBr/imRjp2qDHxuBEbbxQsHYxq+Nx/LKb8kv6fZ8wzfiamyPZkZSyOKg0cy93zn3fN+9d+Y6ioqLHTZRZBK24tsVU8woYZTqoN3X2qn9hBAOPXIVlhb01/PnzrW1tauJROLng4ODx8lksgcEfxPomu7RM0VRrrW2trokoccKzEWYKigcDnv39vZ+APkL/IZ2dnaim5ubsY2Njfj6+vohga7pHj2jNmj7Ev9b3vT1+RCjTBaYizDNpRIQNpAbcCICojj+CzOgttSH+i4vL3+DWOWSg4Y1aOhSW1tbGUb+y+7u7uDW1pZiVpAe1JdiQOi9r69fd+vdMyssLWp/f/8hRhy2K0gPihWPx//46soVDzicRuJOElaCIHcwyjBGKfIJionJcw8cbklcVmFaTd1ACsn6VL6FUUyKPTMzcxNcLimtRScJU1P4TyhUQTMPM0tBbYhCgGJjWXnZ2dlZDc5TPCEyUnrELXT6EXZHCiVKA3GsrKz8BE4Pz9aS44SpbnV0dLjYrfj29rYoJIiDXLvR0BCQUpp2LcMtWq0xE0Nmgw8NDYmuri4VY2NjlsUR1+joKK1vp/WuacJIaSka05oVxWiEWQwPD2eIs9IXXB+Rzt/AXcGuabXmcEibshPWPsIysYK1RliBLG58fNx0P3DR9vUE3D5p+VDTmU4jWUn1hQ4Jq8IIIyMjdsQlqM7AHdCnM0MYvSFgFElA2IEsbmJiwkwfeJF8A+5KwHucMMrtqVyFTU9Pi+7ublVYf3+/FWFVXGfampYpjFKJgkwAwipIVE9PT4YoE/20VFYbCsNW8RhTOIZfYQXYXtKiBgYGVFIz/YgLi+3TrMKwud7FCKKfQhQBXB+XlpbuG6VSLf6pqSl6IfwXIxFmMDs7myGKXTAN4sLe/K1R8avCmpubfWjci5HQdiGyAaMV8/PzYmFhQSUy00cCcfReuny5zmi5KObFzU0bK8RFLJJYBnFgwtwBZ81JC2x6S6Jtob29vYZmyuHhoQKIAkGBw71NTU0XpPo6siVlpJMsnZycvJVKpQYRIFUAUSmK/d+HD9+D6yzgN9rEtXSWsfIzsVjsdwQIw3KRT1DMxcXFB+CoZbfOGL326F3zBOvqAlg+/synOIq1urra4Q8E6qXaMnxRlF0r5fXEWxsMVuId7T62qkEEVQBhEwrFgFNtLEpLodfMq7XsmpZSKsoAvsK/owkBggiQsCCI2kao0LmmgiwqIBV81o8RvTgnT2EK4G9paTmHBZXOK15h9CEQRoFVIA4kGXG+F6U2EPQ6Go3+2tjYeJFrqoadqrD6+SanVBPnYsupHqrq6utrB96/v01bCT7znpEbqJ8+Al3Tvbm5uQdv371r/PL8+XMs6CwXuo9juex88OrFlXEdeHgG+ZmERv8FEwd1qOVnNdzWz309HMvWEcGRQxUuznIe6WlOhY9rpZLJqxlVfC/AbSq4jysfhypG7mkC3UzoZXIZXn7mlgRldSmngzvJQScTlnN6ZGj3nccd3H12R52FPIP9ZIfD/wNqawjFew5lbwAAAABJRU5ErkJggg==);
+}
+
+/* line 58, ../../../sass/v2/vendor/flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+/* Pause/Play */
+/* line 61, ../../../sass/v2/vendor/flexslider.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+/* line 62, ../../../sass/v2/vendor/flexslider.scss */
+.flex-pauseplay a:before {
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+
+/* line 63, ../../../sass/v2/vendor/flexslider.scss */
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+
+/* line 64, ../../../sass/v2/vendor/flexslider.scss */
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+
+/* Control Nav */
+/* line 67, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+/* line 68, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-nav li {
+  margin: 0 4px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 69, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-paging li a {
+  width: 14px;
+  height: 14px;
+  display: block;
+  text-indent: -9999px;
+  cursor: pointer;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABO0lEQVQ4y5WSu26DYAyFuQglCxNS1gydMkXqm7Rbu1d9hTxC975C0jxHEVuFurNHiJsAFcqdvz7IVJSiSh0+KbHPsY1/S7KiSBNkQiU0YsVoHJOn2qlBieP4tmma177vM1AUheU4zh3ldC6ijAVGo1KW5ROJBei6bmD8f7lcnkljEGs2D0aZOt1AUNf1IihimuYDm9FZhlHFeFVVCRptEeSo+Btptzy2CqNG3T7yPBdZli2CXNu2OWl33FWDcQVjmqYiSZJFkCPjJ2n3xAaewYjtIRmG4SLI+b7/PjdqtPJ72qoIgkB4nvcDxJA7nk6H+ah4XB0rxyKiKBKu6w7gN2K2bR9Jcz1fjswrNizLesT26HsKgPFezucDm67mzyHxo645seWR9syOY78O4PvkuJrOog1j/HVy/z7yL7HaTWAbQ7LbAAAAAElFTkSuQmCC);
+}
+
+/* line 71, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-paging li a:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABQElEQVQ4y5WSPUsDQRCG392wXJqrDtKmsEoVsNRWwcJCzyO5xK9K/AsB/QG2kspaOwslETRcBE8CCin8MX6V68xmIscaDiye45h539nZ2YHSGgUUUSEMEQhGYqqoLRo0BkmMLM3x2PlwPLQmuNzsUC6UInpeYG7UGLXP8Lxr8bpvMT2cwf8cu97qkyYiqmJ2RkUnbSPvWrwckNiDYzmZz9eOxBw4D/fv2uPKk73FcG6QTElbl7YrbDR0n3c80YlljNNP0jbkVMPGwBmz1JYyTr9I2yRqzuM+PL1R2+K+tRjO3cRvvtHQyLvIKHm3YzH04BjnTlZ6fqv8uCGP3FUeJha38Qz+59jFxhVplv3hKBlxhP76MU+P7vPtoPZwutoT05L/HJBHrUqiLi01hYbE/izA78pJtVBENSEqW7l/L/kPeluy5u5nuxEAAAAASUVORK5CYII=);
+}
+
+/* line 72, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-paging li a.flex-active {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABQElEQVQ4y5WSPUsDQRCG392wXJqrDtKmsEoVsNRWwcJCzyO5xK9K/AsB/QG2kspaOwslETRcBE8CCin8MX6V68xmIscaDiye45h539nZ2YHSGgUUUSEMEQhGYqqoLRo0BkmMLM3x2PlwPLQmuNzsUC6UInpeYG7UGLXP8Lxr8bpvMT2cwf8cu97qkyYiqmJ2RkUnbSPvWrwckNiDYzmZz9eOxBw4D/fv2uPKk73FcG6QTElbl7YrbDR0n3c80YlljNNP0jbkVMPGwBmz1JYyTr9I2yRqzuM+PL1R2+K+tRjO3cRvvtHQyLvIKHm3YzH04BjnTlZ6fqv8uCGP3FUeJha38Qz+59jFxhVplv3hKBlxhP76MU+P7vPtoPZwutoT05L/HJBHrUqiLi01hYbE/izA78pJtVBENSEqW7l/L/kPeluy5u5nuxEAAAAASUVORK5CYII=);
+  cursor: default;
+}
+
+/* line 74, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+
+/* line 75, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+/* line 76, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* line 77, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+
+/* line 78, ../../../sass/v2/vendor/flexslider.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 81, ../../../sass/v2/vendor/flexslider.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  /* line 82, ../../../sass/v2/vendor/flexslider.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}

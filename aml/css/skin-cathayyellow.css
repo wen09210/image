@@ -1,0 +1,257 @@
+/* # Skin (default)
+==================================================
+	
+    === nav ===	
+	#fbca01 dark green
+	#ffda16 fresh green
+	#fffadd super light silver
+	#fff2ac light silver
+	#ffec80 silver
+	
+    === submenu ===	
+	#423000 deep grey
+	#ae7e00 dark grey
+	#e1a400 grey
+	
+    === footer ===	
+	#fac801 bright green
+	
+    === button ===	
+	#fed44b glow black
+	#c48d00 ~ #573f00 black
+	
+    === widget head ===	
+	#fefae7 ~ #fdf3c6  light grey
+	#fceead ~ #fed83d  dark grey
+	#ffda16 ~ #fbca01  green
+	
+    === table ===	
+	#ce9600 light grey
+	#fffbe6 super light grey
+	
+==================================================*/
+
+/*=== General styles ===*/
+body { color: #000; }
+#main-wrapper { background: url(../images/bg-cream.jpg) repeat-x top; }
+
+/*=== Top part ===*/
+#top { border-bottom: 5px solid #fbca01; }
+ul.userNav li { background: #fffadd; border-top: 3px solid #fffadd;}
+ul.userNav li a { color: #666;}
+ul.userNav li a:hover { color: #000;}
+ul.userNav li:hover { background-color: #fff2ac; border-top: #fff2ac 3px solid; }
+ul.userNav li.current{ background-color: #fbca01; border-top: #5b4200 3px solid; }
+ul.userNav li:active{ background-color: #ffec80; border-top: #999 3px solid; }
+ul.userMobileNav { background: #fffadd;}
+ul.userMobileNav li a { color: #666;}
+ul.userMobileNav li a:hover { color: #000;}
+ul.userMobileNav li:hover { background-color: #fff2ac; }
+ul.userMobileNav li.current { background-color: #fbca01; }
+ul.userMobileNav li:active{ background-color: #ffec80;}
+
+
+/*=== Navigation ===*/
+.navigation-wrapper { border-bottom: #ffda16 3px solid; }
+ul#nav li, ul#m-nav li { background: #fafaf3;}
+ul#nav li a, ul#m-nav li a { color: #666;}
+ul#nav li:hover, ul#m-nav li:hover { background-color: #fbca01; }
+ul#nav li.current, ul#nav li.current:active, ul#m-nav li.current, ul#m-nav li.current:active{ background-color: #ffda16;}
+ul#nav li:active, ul#m-nav li:active{ background-color: #ffda16;}
+.navPrev {background: #ffda16 url(../images/nav-scroll.png) no-repeat 0 1px;}
+.navNext {background: #ffda16 url(../images/nav-scroll.png) no-repeat 0 -24px;}
+.navNew {background: #ffda16 url(../images/nav-scroll.png) no-repeat 0 -51px;}
+.navPrev:hover, .navNext:hover, .navNew:hover  {background-color: #fbca01; }
+.mSearchs { background: #fffadd url(../images/icon-mobile-nav.png) no-repeat center 5px;}
+.mMessages { background: #fffadd url(../images/icon-mobile-nav.png) no-repeat center -26px;}
+.mSettings { background: #fffadd url(../images/icon-mobile-nav.png) no-repeat center -59px;}
+.mSearchs:hover, .mMessages:hover, .mSettings:hover, .mMessages.current, .mSettings.current { background-color: #fbca01; }
+.mMessagePanel { border-top: #fbca01 3px solid;}
+
+.tabLayout { background:#fff2ac;}
+
+.currentServices { background: #ffda16 url(../images/action-tab-trigger.png) right 4px no-repeat; }
+.allServices { background: #ffda16 }
+.currentServices.active{ background: #ffda16 url(../images/action-tab-trigger.png) right -26px no-repeat;}
+
+.triggerServices {  background: #fffadd; }
+.triggerServices:hover { background: #fbca01; text-shadow: 1px 1px 0 #666; color: #fff;}
+.triggerServices.active{ background: #423000;}
+
+.navServices{ background: #423000; }
+.navServices li a{  border-bottom: 1px solid #666; }
+.navServices li:hover{ background: #000; }
+
+/*=== Font resize ===*/
+.fontsizeM, .fontsizeD, .fontsizeP{ border-right: 1px solid #ffda16; }
+
+/*=== Sidebar ===*/
+.bannersHolder, .bannersHolderAlt{ 
+    background: #ffec80;
+    background: -moz-linear-gradient(top,  #fffadd 0%, #ffec80 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffadd ), color-stop(100%,#ffec80));
+    background: -webkit-linear-gradient(top,  #fffadd 0%,#ffec80 100%);
+    background: -o-linear-gradient(top,  #fffadd 0%,#ffec80 100%);
+    background: -ms-linear-gradient(top,  #fffadd 0%,#ffec80 100%);
+    background: linear-gradient(top,  #fffadd 0%,#ffec80 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffadd', endColorstr='#ffec80',GradientType=0 );
+}
+#submenu .container a, #mobileSubmenu .container a, #padSubmenu .container a{ background: #e1a400 url(../images/rightArrowLight.png) no-repeat 15px center;}
+#submenu .container a:hover, #mobileSubmenu .container a:hover, #padSubmenu .container a:hover{ background: #ae7e00 url(../images/rightArrowLight.png) no-repeat 15px center;}
+#submenu .container li a.current, #mobileSubmenu .container li a.current, #padSubmenu .container li a.current{ background: #ae7e00 url(../images/rightArrowLight.png) no-repeat 15px center;}
+#mobileSubmenu ul{ border: 4px solid #ffda16; border-top:none;}
+.sepDark { border-top: 4px solid #ffda16;}
+
+/*=== Footer ===*/
+.footer-wrapper { background: #fac801 url(../images/bg-footer.png) repeat-x;}
+
+/*=== Button ===*/
+.bBlack {  color:#fff !important; text-decoration:none !important; border: 1px solid #4e4e4e; box-shadow: 0 1px 2px 0 #fed44b inset; -webkit-box-shadow: 0 1px 2px 0 #fed44b inset; -moz-box-shadow: 0 1px 2px 0 #fed44b inset;
+background: #c48d00 url(../images/sprite.png);
+background-image: url(../images/sprite.png), -moz-linear-gradient(top,  #c48d00 0%, #573f00 100%);
+background-image: url(../images/sprite.png), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c48d00), color-stop(100%,#573f00));
+background-image: url(../images/sprite.png), -webkit-linear-gradient(top,  #c48d00 0%,#573f00 100%);
+background-image: url(../images/sprite.png), -o-linear-gradient(top,  #c48d00 0%,#573f00 100%);
+background-image: url(../images/sprite.png), -ms-linear-gradient(top,  #c48d00 0%,#573f00 100%);
+background-image: url(../images/sprite.png), linear-gradient(top,  #c48d00 0%,#573f00 100%);
+}
+.bBlack:hover { opacity: 0.85; filter: alpha(opacity=85); -webkit-transition: opacity 0.2s ease-in-out; -moz-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out; }
+.bBlack:active { box-shadow: 0 0 6px #000 inset, 0 1px 0 #fff; -webkit-box-shadow: 0 0 6px #000 inset, 0 1px 0 #fff; -moz-box-shadow: 0 0 6px #000 inset, 0 1px 0 #fff; }
+
+.ie7 .bBlack.icoAnalysis,.ie8 .bBlack.icoAnalysis {background: #c48d00 url(../images/sprite.png) 10px -86px no-repeat ;}
+.ie7 .bBlack.icoDownload,.ie8 .bBlack.icoDownload {background: #c48d00 url(../images/sprite.png) 10px -128px no-repeat ;}
+.ie7 .bBlack.icoPrint,.ie8 .bBlack.icoPrint {background: #c48d00 url(../images/sprite.png) 10px -258px no-repeat ;}
+.ie7 .bBlack.icoQuery,.ie8 .bBlack.icoQuery {background: #c48d00 url(../images/sprite.png) 10px -723px no-repeat ;}
+.ie7 .bBlack.icoBack,.ie8 .bBlack.icoBack {background: #c48d00 url(../images/sprite.png) 10px -430px no-repeat ;}
+.ie7 .bBlack.icoNext,.ie8 .bBlack.icoNext {background: #c48d00 url(../images/sprite.png) 10px -301px no-repeat ;}
+.ie7 .bBlack.icoCheck,.ie8 .bBlack.icoCheck {background: #c48d00 url(../images/sprite.png) 10px -554px no-repeat ;}
+.ie7 .bBlack.icoCancel,.ie8 .bBlack.icoCancel {background: #c48d00 url(../images/sprite.png) 10px -680px no-repeat ;}
+.ie7 .bBlack.icoSetting,.ie8 .bBlack.icoSetting {background: #c48d00 url(../images/sprite.png) 10px -638px no-repeat ;}
+.ie7 .bBlack.icoEmail,.ie8 .bBlack.icoEmail {background: #c48d00 url(../images/sprite.png) 10px -514px no-repeat ;}
+.ie7 .bBlack.icoAdd,.ie8 .bBlack.icoAdd {background: #c48d00 url(../images/sprite.png) 10px -850px no-repeat ;}
+.ie7 .bBlack.icoSave,.ie8 .bBlack.icoSave {background: #c48d00 url(../images/sprite.png) 10px -344px no-repeat ;}
+.ie7 .bBlack.icoHeart,.ie8 .bBlack.icoHeart {background: #c48d00 url(../images/sprite.png) 10px -944px no-repeat ;}
+.ie7 .bBlack.icoTimer,.ie8 .bBlack.icoTimer {background: #c48d00 url(../images/sprite.png) 10px -994px no-repeat ;}
+.ie7 .bBlack.icoMsg,.ie8 .bBlack.icoMsg {background: #c48d00 url(../images/sprite.png) 10px -1044px no-repeat ;}
+.ie7 .bBlack.icoEdit,.ie8 .bBlack.icoEdit {background: #c48d00 url(../images/sprite.png) 10px -216px no-repeat ;}
+.ie7 .bBlack.icoResult,.ie8 .bBlack.icoResult {background: #c48d00 url(../images/sprite.png) 10px -765px no-repeat ;}
+.ie7 .bBlack.icoLottery,.ie8 .bBlack.icoLottery {background: #c48d00 url(../images/sprite.png) 10px -1097px no-repeat ;}
+
+/*=== Overview, Settings ===*/
+#widgetLists .container a.active{ background: #ffda16;}
+.langBox.active{ background: #ffda16;}
+.themeBox.active{ border: 4px solid #ffda16; }
+
+/*=== Widget ===*/
+.whead, .wheadDark { color: #423000; }
+.whead {  
+	background: #fefae7;
+	background: -moz-linear-gradient(top,  #fefae7 0%, #fdf3c6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefae7), color-stop(100%,#fdf3c6));
+	background: -webkit-linear-gradient(top,  #fefae7 0%,#fdf3c6 100%);
+	background: -o-linear-gradient(top,  #fefae7 0%,#fdf3c6 100%);
+	background: -ms-linear-gradient(top,  #fefae7 0%,#fdf3c6 100%);
+	background: linear-gradient(top,  #fefae7 0%,#fdf3c6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefae7', endColorstr='#fdf3c6',GradientType=0 );
+}
+.wheadDark {
+	background: #fed83d;
+	background: -moz-linear-gradient(top,  #fceead 0%, #fed83d 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fceead ), color-stop(100%,#fed83d));
+	background: -webkit-linear-gradient(top,  #fceead 0%,#fed83d 100%);
+	background: -o-linear-gradient(top,  #fceead 0%,#fed83d 100%);
+	background: -ms-linear-gradient(top,  #fceead 0%,#fed83d 100%);
+	background: linear-gradient(top,  #fceead 0%,#fed83d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceead', endColorstr='#fed83d',GradientType=0 );
+}
+.wheadGreen {  
+	background: #ffda16;
+	background: -moz-linear-gradient(top,  #ffda16 0%, #efbf01 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffda16 ), color-stop(100%,#efbf01));
+	background: -webkit-linear-gradient(top,  #ffda16 0%,#efbf01 100%);
+	background: -o-linear-gradient(top,  #ffda16 0%,#efbf01 100%);
+	background: -ms-linear-gradient(top,  #ffda16 0%,#efbf01 100%);
+	background: linear-gradient(top,  #ffda16 0%,#efbf01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffda16', endColorstr='#efbf01',GradientType=0 );
+}
+
+ul.viewTab li a.viewGraphic:hover, ul.viewTab li a.viewTable:hover, ul.viewTab li a.viewGraphic.active, ul.viewTab li a.viewTable.active { border-top: 2px solid #ffda16; }
+ul.wtab li.ui-tabs-selected, ul.mtab li.ui-tabs-selected, ul.stab li.ui-tabs-selected,  ul.ntab li.ui-tabs-selected{ border-top: 4px solid #ffda16; }
+ul.wtab li:hover, ul.mtab li:hover, ul.stab li:hover, ul.ntab li:hover{ border-top: 4px solid #ffda16; }
+ul.wtab li:active, ul.mtab li:active, ul.stab li:active, ul.ntab li:active{ border-top: 4px solid #ffda16;}
+
+.bGrey { background: #f5f5f5;}
+.bDarkGrey { background: #999;}
+
+.liArticle li:nth-child(even) { background: #f5f5f5 url(../images/subnav_arrow.png) no-repeat 3px  8px;}
+.liArrowAlt li:nth-child(even) { background: #f5f5f5 url(../images/subnav_arrow.png) no-repeat 8px 15px;}
+
+/*=== Widget table ===*/
+.tDefault thead td { background-color: #ce9600 !important; }
+.tDefault tbody tr:nth-child(even) { background: #fffbe6; }
+.tVertical tbody th { background: #ce9600; }
+.tVertical tbody tr:nth-child(even) { background: #fffbe6; }
+
+/*=== Widget breadcrumb ===*/
+.breadcrumb li a{ background-image:url(../images/breadcrumb.png); }
+
+/*=== Dashboard alternative ===*/
+#dashboard .whead {  
+	background: #f1fbf0;
+	background: -moz-linear-gradient(top,  #f1fbf0 0%, #cee8ca 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1fbf0), color-stop(100%,#cee8ca));
+	background: -webkit-linear-gradient(top,  #f1fbf0 0%, #cee8ca 100%);
+	background: -o-linear-gradient(top,  #f1fbf0 0%,#cee8ca 100%);
+	background: -ms-linear-gradient(top,  #f1fbf0 0%,#cee8ca 100%);
+	background: linear-gradient(top,  #f1fbf0 0%,#cee8ca 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1fbf0', endColorstr='#cee8ca',GradientType=0 );
+}
+#dashboard .bGrey { background: #f1fbf0;}
+
+/*=== GUI ===*/
+.checking { background: url(../images/ico-gui.png) no-repeat 10px 0; }
+.checkingDollar { background: url(../images/ico-gui.png) no-repeat 10px -165px;}
+.loan { background: url(../images/ico-gui.png) no-repeat 10px -330px;}
+.loanBack { background: url(../images/ico-gui.png) no-repeat 40px -330px;}
+.saving { background: url(../images/ico-gui.png) no-repeat 10px -495px;}
+.savingDollar { background: url(../images/ico-gui.png) no-repeat 10px -663px;}
+.creditcard { background: url(../images/ico-gui.png) no-repeat 10px -854px;}
+
+.month-scroll li a, .month-scroll-medium li a, .month-scroll-extra li a{ background:#ffda16; border-top: 4px solid #ffda16; }
+.month-scroll li a:hover, .month-scroll-medium li a:hover, .month-scroll-extra li a:hover{ background:#99e193;}
+.month-scroll li a.active, .month-scroll-medium li a.active, .month-scroll-extra li a.active{ background:#fbca01;}
+
+#accountList .container, .bUsual{  
+	background: #ebf8cf;
+	background: -moz-linear-gradient(top,  #ebf8cf 0%, #d6edb3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf8cf), color-stop(100%,#d6edb3));
+	background: -webkit-linear-gradient(top,  #ebf8cf 0%,#d6edb3 100%);
+	background: -o-linear-gradient(top,  #ebf8cf 0%,#d6edb3 100%);
+	background: -ms-linear-gradient(top,  #ebf8cf 0%,#d6edb3 100%);
+	background: linear-gradient(top,  #ebf8cf 0%,#d6edb3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf8cf', endColorstr='#d6edb3',GradientType=0 );
+}
+
+.accountUnit.active, .accountUnitType.active, .accountUnitLeft.active, .accountUnitRight.active, .accountUnitNobg.active{ background: #ffda16;}
+.accountUnitLeft.active { background: #ffda16 url(../images/arrow-big.png) no-repeat right center; }
+.accountUnitRight.active { background: #fbca01 url(../images/arrow-big-alt.png) no-repeat left center; }
+.accountUnitAlt.active { background: #fbca01} 
+.accountUnitMark.active { background: #ffda16; } 
+.accountUnitNobg.active .accountNumberPreset{ background: #ffda16; }
+.accountUnitNobg.active .accountNamePreset, .accountUnitNobg.active:hover .accountNamePreset{ background: #fbca01; }
+
+.cb-enable, .cb-disable, .cb-enable span, .cb-disable span { background: url(../images/switch.gif) repeat-x; display: block; float: left; }
+.cb-enable span, .cb-disable span { line-height: 30px; display: block; background-repeat: no-repeat; font-weight: bold; }
+.cb-enable span { background-position: left -90px; padding: 0 10px; }
+.cb-disable span { background-position: right -180px;padding: 0 10px; }
+.cb-disable.selected { background-position: 0 -30px; }
+.cb-disable.selected span { background-position: right -210px; color: #fff; }
+.cb-enable.selected { background-position: 0 -60px; }
+.cb-enable.selected span { background-position: left -150px; color: #fff; }
+
+.pages li .active, .pages li a:active, .pages li .active:hover { background: #573f00;}
+.tPages ul li a:active { background: #573f00;} 
+
+@media only screen and (max-width: 767px) {
+.tDefault td:before {background: #ce9600; }
+}
