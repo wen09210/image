@@ -1,0 +1,67 @@
+#data-loader {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+#data-loader .wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 650px;
+  height: 283px;
+  background: #fff;
+}
+#data-loader .wrapper .cloud-small-1 {
+  position: absolute;
+  top: 30px;
+  right: 68px;
+  width: 101px;
+  height: 68px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAABECAMAAACvUgtuAAAANlBMVEV2veH///92veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veHVbuWaAAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAAHFSURBVFjDvdlZkoUgDAXQMIvIcPe/2f7o9lX7nKIMdwOnkBTEQGJE6C7ShQgAQImzpcfhKG7BJiXo5orN2CfqpoqKOM7cULEFZ0m6leJwkaLbKB5ow1wpDmjEXCgGt8myVpH5XsFSq8zgxNQpioUg1ymBp8DVKMylAIm0j79bmJZJPVM8V8G2SJJ7oiS8TTZsRaEii2QqtkbZH6Qniq9SdkfPibKgkpEcJVYqSEMU+CEK1BAlXirK+iUWNF3MlyJdQqvMZ8pU0C75WFEJTaOPFF3aIpgOFIvW8Xul+Ur+1/KqsDqWp6eMMWarzOiUNMmPotAvxa9KQM8kKYQQJNE3RQsh7vvu6nNAClF9NTKqWgjK3RU4Qf0R5CEK7BAlDFHyEAVUhihxiDINUdQQZcQni6wJQosuoP9iFBGp3sUcBGu0U7sUQf2Zae0tXdfv9emTbemJfHp+2edmLtPX/4vp0DIFtf8Xk3aO7dqAGJxkzJPvS6Kk7zvxxWz8jil6s5vF0RuF3GXlZU1EZj2fSlBvXxP0xTbFv0mIct57b2reLOR8WqINX0aI9OGRHZjTZK5CpMLX9mTPNvgKERm/jjTyMr14f/kB4kMuQ8xGl0gAAAAASUVORK5CYII=);
+}
+#data-loader .wrapper .cloud-small-2 {
+  position: absolute;
+  top: 140px;
+  left: 128px;
+  width: 61px;
+  height: 38px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAmCAMAAABArWODAAAAM1BMVEV2veH///92veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veHALddEAAAAEHRSTlMAABAgMEBQYICPn6+/z9/vNiZ63QAAAPFJREFUSMfF1kmShSAQRVHApJEu3/5XW4NvGDZIO6g7NU6gIoIQ5ZQNDADZm/sFee3DOsZZNmOaEm4FNaCJ8Sipbv3GV97SCYX2Tu3wGXvd0IpRK1JVW9RjW9MBrfSn1jo3NauiNu1xAQCuoLeIzvitidFdtA+tBjCATDcdMZi9aA3M8EP7cQ06NU/oeGg7MzSgpRCCMubycmyiH9MmRyf6lqz9DDp0XtL4L52X9L703LTyzoNcmG/e5Py3xvRboZRm8W+NGR8L1e7Jq8ru/z4CHCUASPtWPTucm4N1ZlPnP49N18njubcFAEhOvXZgudIfQT1hCAU5PzMAAAAASUVORK5CYII=);
+}
+#data-loader .wrapper .cloud-main {
+  position: absolute;
+  top: 30px;
+  left: 190px;
+  width: 250px;
+  height: 152px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAACYCAMAAAD6DgReAAAANlBMVEV2veH///92veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veF2veHVbuWaAAAAEXRSTlMAABAgMEBQYHCAj5+vv8/f7/4ucL8AAASkSURBVHja5d3ZlqsgEAVQZJ6h/v9n70Pn2hkc0IAt1HnPSnYQFYWCkCvChHEhwpwQrBaU/EWmORewlU+wmOgkHZfObITNBE1HpFO14/6Jl6PRmc1QmHRh07enMwdHkg0dhE5NhoNJagi6THAigXdPpx5OxnROlxlOJ/Ke6Ra+SVbd0mmEL+M6pfMEXyfQHuk8Q4VE2h+9jryxvQm9lrytvQW9nrypvQGdVZQDxI7o31/VLrrG1ad7qBzdC11D9fA+6Ly+HBLtgU5TAzr4HugWmkTcn87byNsc8nXpoRG9yaOLqnTVSg6Z3YgulLEhBG+MmH9WakZvcWNzis7065GdnGzb6ADA7kBXSz06W9ay0Vs0+2G6WgUGaBr63M9CCMEaKS6ks8a+rZM8lQtvLKOV19B1/jM5rH+1V83p1MFNky1rSq89EK98GmTt6PeWA4Cljei3lx9+YVNMd9BBDr20KKVr6CJZVKezDJ1E16YH6CauLl0CjGcvoycY0F5EVwAD2ovooTM62Fp0Bt1FVaLr/uiZ16GH/uglL6dL6NBjbA0675K+/5KygK76pIcKdNMnffcsPzA9fU/3MGazF9BDr/SIl77zWn6XLvqV7wxjdujUQcfJX9Blhq4jz9Kph87jTtJ56l2+fWlfp6sM/YedoWsYIeoE3Q0h3xy6rtAHkW8O35bpdhD55nluka5gmBykC8BKZxkGSwxG8RJ6hCHzmNe4RTcwbLLjW3QOQyeIdXqAwRPYCl3B+HlUw3inJwR0SHyBbgBH1Cc9IaGDe6crQBNHX+kRDx0ifaZzwBT3THeA004IybjooGe6AGzh/+kWHT3RBz2io4N90AFh+DRNE8KuDgBhmqZpkJcORyOmacJ2VX9q9vEfUqw2O55R28c9HcEph0zR0kHhpXu89IyXDhwvXeOlW7z0gJeeMA7XH8F6Dw8ACJ9PzXSNly7w0gliesBL13jpHKk8YJpY8DZgRzSd5C2mz/IENSJRTJpbDB1tTnRxIrIZVE+xE0E2hWoOn4aeEb55vE/jrYAoi55nRntk8kxnOkU2jco8rYKQ6Bp9Gm55X3GjTz3VDq2W9LbOjePp7uJ9dSOaK5z9XNOK5KYuLq1kRmHPbHH9OgJ75itVC+Tw5zq5Wqti8PN8VhsVSmgY+mjfLskz7mPKyPeqEfFBb+w8LSi/pQfs8VmXVR47sYH63ZucFdeb6wqf9n7r7wL2oprRVMVuOjE1W0+VvTi+IQLT8fQffV0n/qlGIVceskXNzu77Iu3HlT46zW9z8+N+iyV//NTkNftyeysmlHlEC35BfYusC0s8hvdKklz8/6VS0Ga7+DUr0JYMJYTIcBx+2QaGJ4/5uHlOgjDXTBNu6wtei65cvXfjqZKEnhLC7conw2vnpMrnFfe5jb3qbVt5YrDzfxtOptzrh3Mwcql3CuNf/6fo9fldiyvu2HlwsPO2MQ8VPydQIXZ6LRdCG2O0EF9u51hzs9JDgx3fbk/5v9inlRTf8iZByFj0wmrDSREyHJ0Qttvy94A3oBNCVdi6BAtChqUTQtjyRfij2t2AdEII4cqG31N+8EYycqv80v8BAQvj3IeH/OcAAAAASUVORK5CYII=);
+}
+#data-loader .wrapper .cloud-main .loader-bar {
+  position: absolute;
+  bottom: 40px;
+  left: 26px;
+}
+#data-loader .wrapper .cloud-main .loader-bar .rectangle, #data-loader .wrapper .cloud-main .loader-bar .white {
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+  width: 6px;
+  height: 20px;
+  background: #4394bd;
+}
+#data-loader .wrapper .cloud-main .loader-bar .rectangle .white, #data-loader .wrapper .cloud-main .loader-bar .white .white {
+  background: #fff;
+  opacity: 0;
+  margin-left: 0;
+}
+#data-loader .wrapper .text {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  color: #3469af;
+}
+#data-loader .wrapper .text .main, #data-loader .wrapper .text .dot {
+  display: inline-block;
+}
+#data-loader .wrapper .text .dot {
+  margin-right: 2px;
+}

@@ -1,0 +1,275 @@
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*.main {
+	min-height: 730px;
+}*/
+.loadingElement {
+  display: none;
+}
+.loading .loadingElement {
+  display: block;
+}
+
+[data-id="minHeight"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.header {
+  background: #00994e;
+  height: 60px;
+  position: relative;
+}
+.header__logo {
+  display: block;
+  width: 200px;
+  height: 50px;
+  background: url(../images/logo--pc.png) 0 0;
+  background-size: 200px 50px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+.header__title {
+  float: right;
+  margin-right: 30px;
+  margin-top: 10px;
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+.header__goback {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  background: url(../images/header__goback.png);
+  background-size: 15px 25px;
+  width: 15px;
+  height: 25px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+@media all and (min-width: 768px) {
+  .footer .wrap {
+    padding: 30px 50px;
+  }
+  .footer__warning {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .footer__left {
+    width: 130px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #111111;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .footer__right {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #777777;
+    line-height: 25px;
+    text-align: justify;
+    letter-spacing: 2px;
+    word-break: break-all;
+  }
+  .footer__copyright {
+    text-align: center;
+    background: #51be77;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #51be77 0%, #27ae58 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #51be77 0%, #27ae58 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #51be77 0%, #27ae58 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51be77', endColorstr='#27ae58',GradientType=0 );
+    /* IE6-9 */
+    padding: 22px 0;
+    color: #fff;
+  }
+}
+/* ==========================================================================
+   gotop
+   ========================================================================== */
+.gotop {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: url(../images/gotop.png);
+  right: 120px;
+  bottom: 90px;
+  z-index: 9999;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+.mobileShow {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    min-height: 0;
+  }
+
+  .wrap {
+    padding: 0 10px;
+  }
+
+  /* ==========================================================================
+     Header
+     ========================================================================== */
+  .header {
+    height: 50px;
+    text-align: center;
+  }
+  .header__logo {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 45px;
+    background: url(../images/logo--mobile.png) 0 0;
+    background-size: 50px 45px;
+    margin: 3px auto;
+  }
+  .header__title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    float: none;
+    font-size: 20px;
+  }
+  .header__goback {
+    display: block;
+  }
+
+  /* ==========================================================================
+     Footer
+     ========================================================================== */
+  .footer {
+    padding: 10px;
+    background: -moz-linear-gradient(top, #51be77 0%, #27ae58 100%);
+    background: -webkit-linear-gradient(top, #51be77 0%, #27ae58 100%);
+    background: linear-gradient(to bottom, #51be77 0%, #27ae58 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51be77', endColorstr='#27ae58',GradientType=1 );
+  }
+  .footer__copyrightmobile {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 0 0;
+    text-align: center;
+  }
+  .footer__tel {
+    margin-bottom: 5px;
+  }
+  .footer__tel > a {
+    color: #fff;
+  }
+  .footer__function {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer__function > li {
+    float: left;
+  }
+  .footer__function > li:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #ffffff;
+    margin: 0 5px;
+  }
+  .footer__function > li:last-child:after {
+    display: none;
+  }
+  .footer__function > li > a {
+    color: #fff;
+  }
+  .footer__link {
+    padding: 0 0 10px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+  }
+  .footer__link > a {
+    color: #fff !important;
+  }
+
+  .slogen {
+    padding: 20px;
+    background-color: #f3f2f2;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .slogen__title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .slogen__info {
+    font-size: 13px;
+  }
+
+  .icon__footer--pc:before,
+  .icon__footer--pc:after {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/icon-pc.png);
+    background-size: 25px;
+  }
+
+  /* ==========================================================================
+     gotop
+     ========================================================================== */
+  .gotop {
+    width: 40px;
+    height: 40px;
+    background: url(../images/gotop@3x.png);
+    background-size: 40px;
+    right: 20px;
+    bottom: 10px;
+  }
+
+  /* ==========================================================================
+     Hide items
+     ========================================================================== */
+  .mobileHide {
+    display: none;
+  }
+
+  .mobileShow {
+    display: initial;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* ==========================================================================
+     Header
+     ========================================================================== */
+  .header {
+    background-size: cover;
+  }
+}
