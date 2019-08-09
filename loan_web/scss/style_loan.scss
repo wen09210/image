@@ -1,0 +1,338 @@
+@import "_base.scss";
+.w__200{
+   min-width:200px; 
+}
+.w__360{
+   min-width:360px; 
+}
+.text_green_r_btn{
+    color: #00994e;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: underline;;
+}
+.ErrorContent{
+	@include font(13px,16px,#ff6c00);
+	padding-left:150px; 
+}
+.Loan_plan_box{
+	display:none;
+	.Loan_plan_text{
+		@include font (15px,20px,#626262);
+	}
+	.title_text{
+		@include font (20px,35px,#008852,600);
+		text-align:center;
+		margin:10px 0;  
+	} 
+	table.table_box{
+		width:360px;
+		margin:0 auto 0;  
+		border:1px solid #e0e0e0;
+		td.table_tit{
+			background:#ebf5ec;
+			@include font (16px,30px,#626262);
+			padding:5px 10px;
+			text-align:left;  
+		}
+		td.table_text{
+			background:#fff;
+			@include font (18px,30px,#ff6c00);
+			padding:5px 10px;
+			text-align:right;
+			span{font-weight:bolder;font-size:18px;padding-right:5px;font-family:arial;}   
+		} 
+	}
+}
+.Form_box{
+	display:none;
+	.box_title_detailed{
+		border-top:1px solid #e0e0e0;
+		margin:30px 0 10px; 
+		@include font(14px,40px,#979896); 
+	}
+}
+.Error_box{
+	width:100%;
+	margin-top:5px;  
+	.box_erroe_text{
+    border:3px solid #008852;
+	  border-radius:5px;
+		position:relative;
+		background:#d8ebd8;
+		height:110px; 
+		.people_icon{
+			position:absolute;
+			left:20px;
+      bottom:0; 
+		}
+		.text{
+			padding-top:30px;
+			padding-left:120px; 
+			@include font(16px,25px,#626262); 
+		}    
+	}
+}
+.Advisory_box{
+	width:100%;
+	text-align:center;
+	padding:0 0 200px; 
+	img.complet_img{
+		text-align:center;
+		border:0;
+		margin:20px 0 10px;   
+	}
+	.complet_tit{
+		@include font(24px,35px,#008852,600);
+	}
+	.complet_tit2{
+		@include font(15px,30px,#626262);
+		margin-bottom:20px; 
+	}
+}
+.form_style div.selector.disabled{
+  background-position: 0 -650px;
+	color:#000;
+	border: 1px solid #c0c0c0;
+}
+.form_style div.selector span.disabled{
+	background-position: right -250px;
+}
+.form_style input.uniform-input:disabled{
+	background:#eeeeee;
+  color: #a9a9a9;
+}
+.announce_text p{
+   @include font(14px,20px,#979896,600);
+}
+.text_money{
+	 @include font(15px,20px,#626262,600);
+	 margin-bottom:10px;
+	 .red_must{
+		 text-align:right;
+		 float: right; 
+		 color:#979896;
+		 span{color: #ff0000;} 
+	 } 
+}
+.text_red{
+	color: #ff0000;
+}
+table th.text_left_tit{
+    text-align:left; 
+}
+table th{
+	  border: 1px solid #fffdfd;
+}
+.form_style div.selector, .form-style div.selector{
+    width: 100% !important; 
+}
+.form_style div.selector span, .form-style div.selector span{
+    width:auto !important;
+} 
+.form-steps {
+	display: block;
+	width: 100%;
+	position: relative;
+	margin: 15px 0 30px;
+	&:after {
+		content: "";
+    display: table;
+    clear: both;
+	}
+	&__item {
+		padding: 0;
+		position: relative;
+		display: block;
+		float: left;
+		width:33.33%;
+		text-align: center;
+	}
+	&__item-content {
+		display: inline-block;
+	}
+	// Step Icon
+	&__item-icon {
+		background: #e0e0e0;
+		color: #00994e;
+		display: block;
+		border-radius: 100%;
+		text-align: center;
+		width:35px;
+		height:35px;
+		line-height:30px;
+		margin: 0 auto 10px auto;
+		position: relative;
+		font-size:14px;
+		font-weight: 700;
+		z-index: 2;
+	}
+	// Step text
+	&__item-text {
+		font-size:14px;
+		color: #979896;
+		font-weight: 500;
+	}
+	&__item-line {
+		display: inline-block;
+		height:2px;
+		width: 100%;
+		background: #cfd8dc;
+		float: left;
+		position: absolute;
+		left: -50%;
+		top:16.5px;
+		z-index: 1;
+	}
+	// Active Step
+	&__item--active {
+		.form-steps__item-icon {
+			background: #e0e0e0;
+			color: #00994e;
+      border:3px solid #00994e;
+			&.active_on{
+				background:#00994e; 
+			}
+		}
+
+		.form-steps__item-text {
+			color: #00994e;
+      font-weight:600; 
+		}
+
+		.form-steps__item-line {
+			background: #00994e;
+		}
+	}
+}
+.Newsletter_box{
+	border:3px solid #008852;
+	border-radius:5px;
+	background:#d8ebd8;
+	min-height:200px;
+	margin-bottom:20px; 
+	padding:20px;
+	display:none; 
+	.Newsletter__input_box{
+		display:block;
+		margin-bottom:5px; 
+		@include font(16px,30px,#313131,600); 
+		.tit{
+		  display:inline-block;
+		}
+		.text{
+			 display:inline-block;
+			 input{
+				 width:200px;
+				 text-align:left;
+				 background: #fff;
+         line-height: 30px;
+				 border: 1px solid #c1c1c1;  
+			 }
+			 img.ime_icon{
+				 vertical-align:middle;
+				 padding:0 5px;  
+			 }
+			 .time{
+				 display:inline-block;
+				 color:#ff0000;
+				 font-weight:600;   
+			 }
+			 .btn_btn{
+				border:1px solid #ccc;
+				background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 80%);
+				background-color: #fff;
+				@include font(15px,30px,#004a2f,600);
+				margin: 0 10px;
+				text-decoration: none;
+				vertical-align: middle;
+			}
+		} 
+	}
+	.text_notice{
+		@include font(15px,20px,#626262,600);
+		span{color: #f06601;}
+	}     
+}
+
+.buttons-group {
+    text-align: center;
+    margin: 20px 0;
+		.btn_btn{
+			border:1px solid #ccc;
+			background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 80%);
+		  background-color: #fff;
+			@include font(15px,30px,#004a2f,600);
+			margin:0 10px;
+			text-decoration: none;
+			vertical-align: middle;
+			&:hover{
+				opacity:0.9; 
+			}
+		 }
+     .btn_important_btn{
+				  border:1px solid #ff651b;
+					background: linear-gradient(to bottom, #ff9445 0%, #f06601 80%);
+					background-color: #f87d23;
+					@include font(15px,30px,#fff,600);
+					margin: 0 10px;
+					text-decoration: none;
+					vertical-align: middle;
+					&:hover{
+						opacity:0.9; 
+					}
+			}
+
+}
+
+.amount_box{
+  @include r(100%);
+  margin-bottom:15px; 
+  .amount_text{
+    @include font(15px,30px,#626262,600);
+    display:inline-block; 
+  }
+  .amount_text_equired{
+    @include font(15px,30px,#626262,600);
+    display:inline-block;
+    float:right;
+    span{
+      color:#ff0000; 
+    }   
+  }
+}
+.table_form_box{
+ border:1px solid #e0e0e0;
+ @include r;
+  .td_input-item{
+    width:200px;
+    background:#e0e0e0;
+    .input-item{
+       @include font(16px,20px,#313131,600);
+       span{color:#ff0000;}
+       padding:15px 15px ;
+       border-bottom: 1px solid #fff;
+       &.input_last-child{
+         border-bottom:none;
+       } 
+    } 
+  }
+  .td_input-field{
+     vertical-align:middle;
+     padding-left:20px;
+     border-bottom: 1px solid #e0e0e0;
+     select{
+       appearance: none;
+       border:1px solid #c1c1c1; 
+       background:url(../img/loan/select.png) no-repeat #fff right;
+       padding:6px;
+       min-width:200px;
+       &.min_w360{
+         min-width:360px;
+       }    
+     }
+     img{
+       vertical-align:middle; 
+     }
+  }
+}
