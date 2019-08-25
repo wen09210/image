@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>header</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+      body{
+         background-color: #ddd;
+         font-family: "Noto Sans","Noto Sans TC","Helvetica Neue",Helvetica,Arial,sans-serif;
+      }
+      /* reset */
+      *{
+         
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         margin:0;padding:0;text-decoration:none
+      }
+   </style>
+   <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+   <!-- before login: add class "status_login" -->
+   <!-- after login: remove class "status_login" -->
+
+   <div class="nav_bg"></div>
+   <header class="header clearfix">
+      <a href="https://www.cathayrobo.com/welcome" class="g_nav__g_logo" alt="國泰世華銀行智能投資" title="國泰世華銀行智能投資">
+         <div class="g_nav__logo"></div>
+      </a>
+
+      <a class="login_btn status_login_show" href="https://www.mybank.com.tw/mybank/home/login_new" alt="登入" title="登入">登入</a>
+      <nav id='g_nav' class="g_nav">
+            <div id="head-mobile" class="mobile_nav_btn"></div>
+            
+            <div class="button"><span class="redDots"></span></div>
+            <ul class="menu_list clearfix">
+               <li class="menu_item">                 
+                  <a href="javascript:;" class="menu_dropdown" alt="如何運作" title="如何運作">如何運作</a>
+                  <ul class="sub_menu_list">
+                     <li class="sub_menu_item"><a href="https://www.cathayrobo.com/welcome/howto/algorithm/" alt="智能投資" title="智能投資">智能投資</a></li>
+                     <li class="sub_menu_item"><a href="https://www.cathayrobo.com/welcome/price/" alt="收費方式" title="收費方式">收費方式</a>
+                     </li>
+                     <li class="sub_menu_item"><a href="https://www.cathayrobo.com/welcome/howto/rebalance/" alt="再平衡機制" title="再平衡機制">再平衡機制</a>
+                     </li>
+                     <li class="sub_menu_item"><a href="https://www.cathayrobo.com/welcome/team/" alt="專業團隊" title="專業團隊">專業團隊</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="menu_item"><a href="https://www.cathayrobo.com/welcome/faq/" alt="常見QA" title="常見QA">常見QA</a></li>
+               <li class="menu_item">
+                     <a href="javascript:;" class="menu_dropdown" alt="理財觀點" title="理財觀點">理財觀點</a>
+                     <ul class="sub_menu_list">
+                           <li class="sub_menu_item"><a href="/welcome/trends/">最新文章</a></li>
+                           <li class="sub_menu_item"><a href="/welcome/trends/list/investment-101/">新手投資1.0</a></li>
+                           <li class="sub_menu_item"><a href="/welcome/trends/list/topics/">熱門主題</a></li>
+                           <li class="sub_menu_item"><a href="/welcome/trends/list/global-economy/">全球脈動</a></li>
+                     </ul>
+               </li>
+               <li class="menu_item status_login_disapear"><a href="javascript:;" alt="投資總覽" title="投資總覽">投資總覽</a></li>
+               <li class="menu_item status_login_disapear">
+                  <a href="javascript:;" class="menu_dropdown" alt="" title=""><i
+                        class="fa fa-user qf-icon-margin pc_show"></i><span
+                        class="mb_show">個人管理</span><span class="redDots"></span></a>
+                  <ul class="sub_menu_list">
+                        <li class="sub_menu_item"><a href="javascript:;">個人資料</a></li>
+                        <li class="sub_menu_item"><a href="javascript:;"><span>邀請任務</span><span class="badge badge-danger qf-badge-new">new</span></a></li>
+                        <li class="sub_menu_item"><a href="javascript:;">管理費查詢</a></li>
+                        <li class="sub_menu_item"><a href="javascript:;">歷史投組</a></li>
+                        <li class="sub_menu_item"><a href="javascript:;">登出</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+   </header>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+   <script src="menu.js"></script>
+</body>
+</html>

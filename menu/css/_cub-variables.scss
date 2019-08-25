@@ -1,0 +1,115 @@
+$qf-font-family-sans-serif:  "Roboto","微軟正黑體", "Microsoft JhengHei", sans-serif !default;
+$qf-font-family-serif:       "Roboto","微軟正黑體", "Microsoft JhengHei", sans-serif !default;
+
+$qf-font-size-50:50px;
+$qf-font-size-36:36px;
+$qf-font-size-30:30px;
+$qf-font-size-28:28px;
+$qf-font-size-25:25px;
+$qf-font-size-22:22px;
+$qf-font-size-20:20px;
+$qf-font-size-18:18px;
+$qf-font-size-16:16px;
+$qf-font-size-15:15px;
+$qf-font-size-14:14px;
+$qf-font-size-13:13px;
+$qf-font-size-12:12px;
+
+/* Screen*/
+$qf-screen-i6p:414px !default;
+$qf-screen-i6:375px !default;
+$qf-screen-i5s:320px !default;
+
+/* Nav */
+$qf-navbar-default-toggle-icon-bar-bg:#333;
+/* Color*/
+// $qf-color-danger:#d9534f;
+$qf-color-danger:#ec971f;
+$qf-body-bg:#f3f3f3;
+$qf-color-black:#333333;
+$qf-color-black-light:#444444;
+$qf-color-black-lighter:#666666;
+$qf-color-green:#00994e;
+$qf-color-green-dark:#008a46;
+$qf-color-private:#295bbb;
+$qf-color-private-dark:#1c2537;
+$qf-color-private-dark-hover:#273146;
+$qf-color-gray:#e7e7e7;
+$qf-color-gray-light:#999;
+$qf-color-gray-lighter:#ddd;
+$qf-color-blue-light:#e9fbff;
+$qf-border-color:$qf-color-gray;
+$qf-color-danger:#d9534f;
+$qf-color-danger-dark:#b94340;
+$qf-color-exceed:#f88848;
+$qf-color-blue:#008ab7;
+/* Alert */
+$qf-alert-info-bg:#eaf8ff;
+/* Modal */
+$qf-modal-title-padding:30px 30px 0px 30px;
+$qf-modal-inner-padding:30px 45px 30px 45px;
+$qf-modal-footer-padding:0px 45px 30px 45px;
+/* Form */
+$qf-input-color:#333;
+$qf-input-height-base:36px;
+$qf-input-border-focus:#1785ba;
+
+/* Text Link*/
+$qf-text-link-color:#1785ba;
+$qf-text-link-hover-color:#384f6d;
+$qf-text-link-underline-color:$qf-text-link-color;
+$qf-text-link-underline-hover-color:$qf-text-link-hover-color;
+
+/* Paddings*/
+$qf-section-content-margin:60px;
+
+/* Components */
+/* Card*/
+$qf-card-border-color:#1785ba;
+$qf-card-bg-color:#ffffff;
+$qf-card-padding:40px 10px 70px 10px;
+
+/* Panel*/
+$qf-panel-border-color:$qf-color-gray;
+$qf-panel-bg-color:#ffffff;
+$qf-panel-padding:50px;
+$qf-panel-title-border-color:$qf-color-green;
+$qf-panel-title-border-width:3px;
+
+/*Buttons*/
+$btn-primary-color:#fff;
+$btn-primary-hover-color:#fff;
+$btn-primary-bg:$qf-color-green;
+$btn-primary-hover-bg:$qf-color-green-dark;
+$btn-primary-border:$qf-color-green;
+
+$qf-btn-invest-color:#fff;
+$qf-btn-invest-hover-color:#fff;
+$qf-btn-invest-bg:#870d38;
+$qf-btn-invest-hover-bg:#620a29;
+$qf-btn-invest-border:#620a29;
+//
+$qf-btn-exceed-color:#fff;
+$qf-btn-exceed-bg:$qf-color-exceed;
+$qf-btn-exceed-border:$qf-color-exceed;
+
+$qf-btn-small-width:85px;
+
+
+/*Radio Button*/
+$qf-radiobtn-bg:#1785ba;
+
+
+/*Notification*/
+$qf-notice-header-bg:#00994e;
+$qf-notice-side-bg:#00994e;
+$qf-notice-list-bg:#eff5f1;
+/*Step*/
+$qf-steps-text-normal:#989898;
+$qf-steps-text-active:#ffffff;
+
+$qf-steps-bgcolor-normal:#dbdbdb;
+$qf-steps-bgcolor-active:#00994e;
+
+$qf-steps-label-normal:#9a9898;
+$qf-steps-label-active:#292929;
