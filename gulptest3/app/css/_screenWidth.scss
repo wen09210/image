@@ -1,0 +1,35 @@
+$mainGreen: #2cb277;
+$grey: #e5e5e5;
+// mediaQuery大小
+$largePc :1400px;
+$pc:1200px;
+$pad-media:1023px;
+$phone-media:767px;
+
+// largePc
+@mixin largePc-width() {
+	@media all and (min-width: $largePc) {
+		@content;
+	}
+}
+// pc
+@mixin pc-width() {
+	@media all and (max-width: $pc) {
+		@content;
+	}
+}
+
+//平板
+
+@mixin pad-width() {
+	@media all and (max-width: $pad-media) {
+		@content;
+	}
+}
+
+//手機
+@mixin phone-width() {
+	@media all and (max-width: $phone-media) {
+		@content;
+	}
+}

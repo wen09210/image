@@ -1,0 +1,8 @@
+.iconSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0px; }
+
+i {
+  margin-right: 3px; }
