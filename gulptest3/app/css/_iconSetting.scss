@@ -1,0 +1,15 @@
+//icon
+.iconSection {
+	display: flex;
+	margin: 20px 0px;
+}
+
+i {
+	margin-right: 3px;
+}
+
+.fas.fa-user{
+	&:hover{
+		color:$lightGreen;
+	}
+}

@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-language" content="”zh-Hant-TW”">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="Description" content="liteon">
+	<link rel="icon" href="">
+	<title>Liteon GuideLine</title>
+
+	<link rel="stylesheet" href="css/guideLine.css">
+	<link href="css/bootstrap_datepicker.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-spy="scroll" data-target="#sibarCollapse" style="position:relative">
+	<div id="app">
+		<div class="guideLine">
+
+			<div class="mainHeader">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="reportTitle">
+							GuideLine
+						</div>
+					</div>
+					<div class="col-md-3 userLogInfo">
+						<img src="img/Branding_logo.png" alt="">
+						<!-- <div class="welcomeMsg">
+						<i class="fas fa-user"></i>
+						歡迎，陳松湳(Thai Chen)
+						<button class="logOut">登出</button>
+					</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="mainContent">
+				<div class="row">
+					<div class="col-md-3 sidebar">
+						<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#sibarCollapse" style="padding:0px">
+							<i class="fas fa-bars"></i>
+						</button>
+						<div id="sibarCollapse">
+							<div v-for="item in sidebar">
+								<div class="h3 fontBold mt-3"> {{item.category}}</div>
+								<div v-for="(second,indexTwo) in item.secondLevel" v-scroll-to="'#'+second.href" class="sidebarItem" :class="{active:isActive==second.name}"
+								 @click="isActive = second.name" :key="second.name" >{{second.name}}</div>
+							</div>
+							<!-- <div v-for="(item,index) in sidebar.category">
+							{{item.name}}
+							</div> -->
+
+						</div>
+					</div>
+					<div class="col-md-8 ">
+						<section id="usage">
+
+							<h1 class="guideLineTitle"># liteon GuideLine</h2>
+								<div>Usage:在開始之前請先引入以下語法</div>
+								<div class="guideContent">
+									引用語法(引用時請注意路徑)
+									<div class="h3 fontBold">css</div>
+									<blockquote>
+										<code>
+											<pre>&ltlink rel="stylesheet" href="<span class="preRed">css/guideLine.css</span>"&gt
+</pre></code>
+										<!-- <button onclick="copy()">copy</button> -->
+
+									</blockquote>
+									<div class="h3 fontBold">js</div>
+									<blockquote>
+										<code>
+											<pre>&ltscript src="<span class="preRed">js/liteonAll.js</span>"&gt&lt/script&gt
+</pre></code>
+										<!-- <button onclick="copy()">copy</button> -->
+
+									</blockquote>
+
+
+
+								</div>
+
+
+						</section>
+						
+						<section id="font">
+							<h2 class="guideLineTitle">文字</h2>
+							<table class="fontTable">
+								<div>目前文字使用"微軟正黑體"請依照需求使用H1~H6，使用class有一樣的效果，如.h1.h2.h3.h4.h5.h6</div>
+								<thead>
+									<tr>
+										<th>Heading</th>
+										<th>Example</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<p><code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
+
+										</td>
+										<td><span class="h1">font-size:28px</span></td>
+									</tr>
+									<tr>
+										<td>
+											<p><code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p>
+
+										</td>
+										<td><span class="h2">font-size:24px</span></td>
+									</tr>
+									<tr>
+										<td>
+											<p><code class="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p>
+
+										</td>
+										<td><span class="h3">font-size:20px</span></td>
+									</tr>
+									<tr>
+										<td>
+											<p><code class="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p>
+
+										</td>
+										<td><span class="h4">font-size:18px</span></td>
+									</tr>
+									<tr>
+										<td>
+											<p><code class="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p>
+
+										</td>
+										<td><span class="h5">font-size:16px</span></td>
+									</tr>
+									<tr>
+										<td>
+											<p><code class="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p>
+
+										</td>
+										<td><span class="h6">font-size:14px</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+						<section id="mainColor">
+							<h2 class="guideLineTitle">顏色</h2>
+							<div class="row">
+								<div class="col-md-3"> 藍色
+									<div style="background-color:#042b50;color:white"> #042b50 </div>
+									<div style="background-color:#3355a1;color:white"> #3355a1 </div>
+									<div style="background-color:#095aa6;color:white"> #095aa6 </div>
+									<div style="background-color:#3377b7;color:white"> #3377b7 </div>
+									<div style="background-color:#CAE8FA;color:white"> #CAE8FA </div>
+								</div>
+								<div class="col-md-3"> 灰色
+									<div style="background-color:#898989;color:black"> #898989 </div>
+									<div style="background-color:#dedede;color:black"> #dedede</div>
+									<div style="background-color:#e8e8e8;color:black"> #e8e8e8 </div>
+									<div style="background-color:#f0f0f0;color:black"> #f0f0f0</div>
+								</div>
+								<div class="col-md-3"> 紅色
+									<div style="background-color:#ff0000;color:black"> #ff0000</div>
+									<div style="background-color:#d80e5b;color:black"> #d80e5b</div>
+									<div style="background-color: #f57f23;color:black;">#f57f23</div>
+								</div>
+								<div class="col-md-3"> 綠色
+									<div style="background-color:#5bf01a;color:black"> #5bf01a</div>
+								</div>
+							</div>
+						</section>
+						<section id="mainBtn">
+							<h2 class="guideLineTitle">按鈕</h2>
+							<p>按鈕可根據場景變換顏色</p>
+							<p>基本按鈕</p>
+							<p><code>&lt;button class="btn btnWhite"&gt;&lt;/button&gt;</code></p>
+							<p><code>&lt;button class="btn btnBlue"&gt;&lt;/button&gt;</code></p>
+							<button class="btn btnWhite"> office365</button> <button class="btn btnBlue"> office365</button>
+
+							<p>按鈕包含icon</p>
+							<p><code>&lt;button class="btn btnWhite"&gt;&lt;i class="fab fa-windows"&gt;&lt;/i&gt;&lt;/button&gt;</code></p>
+							<button class="btn btnWhite"><i class="fab fa-windows"></i> office365</button>
+
+				
+						</section>
+						<section id="mainIcon">
+							<h2 class="guideLineTitle">Icon</h2>
+							<div>使用時請記得將webfont資料夾放入根目錄中(目前先放有使用的)</div>
+							<p>使用:<code>&lt;i class="fab fa-windows"&gt;&lt;/i&gt;</code></p>
+							<p>用法，替換其中的className，即可更改Icon</p>
+							<div class="iconSection">
+								<div class="row">
+									<div class="iconDes col-md-4" v-for="item in icon">
+										<i :class="item.icon"></i>
+										<span>{{item.name}}</span>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section id="mainFrame">
+							<h2 class="guideLineTitle">基本框架</h2>
+							<p>基本框架包含Header、Footer與content</p>
+							<br>
+
+							<div class="row">
+								<div class="col-md-4">
+									<p class="componentTitle">Layout2</p>
+									<pre><img src="img/basicTheme.jpg" alt="" class="img-responsive" ></pre>
+
+									<div class="demoDes">
+										<a href="basic.html" target="_blank" class="demo">Demo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="download/Layout2.rar" download="download/Layout2.rar" class="demo"><i class="fas fa-download"></i>download</a>
+									</div>
+
+								</div>
+								<div class="col-md-4">
+									<p class="componentTitle">Login Page</p>
+									<pre><img src="img/loginPage.jpg" alt="" class="img-responsive" ></pre>
+
+									<div class="demoDes">
+										<a href="loginPage.html" target="_blank" class="demo">Demo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="download/loginPage.rar" download="download/loginPage.rar" class="demo"><i class="fas fa-download"></i>download</a>
+									</div>
+
+								</div>
+								<div class="col-md-4">
+									<p class="componentTitle">Workflow</p>
+									<pre><img src="img/workfloeTheme.png" alt="" class="img-responsive" ></pre>
+
+									<div class="demoDes">
+										<a href="workflow.html" target="_blank" class="demo">Demo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="download/workflow.rar" download="download/workflow.rar" class="demo"><i class="fas fa-download"></i>download</a>
+									</div>
+
+								</div>
+
+							</div>
+
+						</section>
+
+						<section id="mainInput">
+				
+							<h2 class="guideLineTitle">表單</h2>
+							<form class="needs-validation" novalidate style="background: #fff;padding: 25px;">
+								<div class="form-row">
+									<div class="FormSystem col-md-12">
+										<div class="input-group">
+											<input type="text" class="form-control" aria-label="Text input with dropdown button" required>
+											<div class="input-group-append">
+												<button class="btn  btnBlue inputButton" type="button"><i class="fas fa-search"></i></button>
+											</div>
+										</div>
+									</div>
+									<div class="FormSystem  col-md-3">
+										<label for="account">Account</label>
+										<input type="text" id="account" placeholder="Account" class="form-control" required>
+										<div class="invalid-feedback"> Please choose a username. </div>
+									</div>
+									<div class="FormSystem  col-md-3">
+										<label for="email">Email</label>
+										<input type="email" id="email" placeholder="Email" class="form-control" required>
+										<div class="invalid-feedback"> Please choose a email. </div>
+									</div>
+									<div class="FormSystem  col-md-3">
+										<label for="validationCustom04">Password</label>
+										<input type="password" id="validationCustom04" placeholder="Password" class="form-control" required>
+										<div class="invalid-feedback"> Please choose a password. </div>
+									</div>
+									<div class="FormSystem col-md-3">
+										<label for="number">Number</label>
+										<input type="number" id="number" placeholder="Number" class="form-control number" required>
+										<div class="invalid-feedback"> Please choose a number. </div>
+									</div>
+									<div class="FormSystem col-md-6">
+										<div class="input-group">
+											<div class="input-group-prepend"> <span class="inputIcon"><i class="fas fa-user-alt"></i></span></div>
+											<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+											 required>
+										</div>
+									</div>
+									<div class="FormSystem col-md-6">
+										<div class="input-group">
+											<div class="input-group-prepend"> <span class="inputIcon"><i class="fas fa-key"></i></span></div>
+											<input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"
+											 required>
+										</div>
+									</div>
+									<div class="FormSystem col-md-2">
+										<h4>Radio(單選)</h4>
+										<input type="radio" name="radio" id="radio1" class="radio" />
+
+										<label for="radio1">radio1</label>
+
+										<input type="radio" name="radio" id="radio2" class="radio" />
+										<label for="radio2">radio2</label>
+									</div>
+
+									<div class="FormSystem col-md-4">
+										<h4>Checkbox(多選)</h4>
+										<div class="FormSystem">
+											<input type="checkbox" name="checkbox1" value="checkbox" class="checkbox">
+											<label for="checkbox1">checkbox1</label>
+										</div>
+										<div class="FormSystem">
+											<input type="checkbox" name="checkbox2" value="checkbox" class="checkbox">
+											<label for="checkbox2">checkbox2</label>
+										</div>
+										<div class="FormSystem">
+											<input type="checkbox" name="checkbox3" value="checkbox" class="checkbox">
+											<label for="checkbox3">checkbox3</label>
+										</div>
+									</div>
+									<div class="FormSystem col-md-6">
+										<h4>Select(下拉選單)</h4>
+										<div class="form-group">
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+									</div>
+									<div class="FormSystem col-md-12">
+										<label for="exampleFormControlTextarea1">Textarea</label>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+										<div class="invalid-feedback"> required </div>
+									</div>
+									<div class="FormSystem col-md-12 center">
+										<button class="btn btnBlue">Submit</button>
+									</div>
+								</div>
+							</form>
+							<p>請記得加上以下項目才會有跳錯誤訊息的功能：<br>
+								&lt;form&gt;加上<span class="preRed">class="needs-validation" novalidate </span><br>
+								&lt;input&gt;請加上<span class="preRed">required</span><br>
+								&lt;div class="invalid-feedback"&gt; <span class="preRed">Please choose a username.</span>&lt;/div&gt;紅字處可替換警示文字
+							</p>
+
+
+							<pre class="preBlack">
+&lt;form <span class="preRed">class="needs-validation" novalidate </span>style="background: #fff;padding: 25px;"&gt;
+  &lt;div class="form-row"&gt;
+    &lt;div class="FormSystem col-md-12"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;input type="text" class="form-control" aria-label="Text input with dropdown button" <span class="preRed">required</span>&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;button class="btn  btnBlue inputButton" type="button"&gt;&lt;i class="fas fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem  col-md-3"&gt;
+      &lt;label for="account"&gt;Account&lt;/label&gt;
+      &lt;input type="text" id="account" placeholder="Account" class="form-control" required&gt;
+      &lt;div class="invalid-feedback"&gt; Please choose a username. &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem  col-md-3"&gt;
+      &lt;label for="email"&gt;Email&lt;/label&gt;
+      &lt;input type="email" id="email" placeholder="Email" class="form-control" required&gt;
+      &lt;div class="invalid-feedback"&gt; Please choose a email. &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem  col-md-3"&gt;
+      &lt;label for="validationCustom04"&gt;Password&lt;/label&gt;
+      &lt;input type="password" id="validationCustom04" placeholder="Password" class="form-control" required&gt;
+      &lt;div class="invalid-feedback"&gt; Please choose a password. &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-3"&gt;
+      &lt;label for="number"&gt;Number&lt;/label&gt;
+      &lt;input type="number" id="number" placeholder="Number" class="form-control number" required&gt;
+      &lt;div class="invalid-feedback"&gt; Please choose a number. &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-6"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt; &lt;span class="inputIcon"&gt;&lt;i class="fas fa-user-alt"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+            required&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-6"&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="input-group-prepend"&gt; &lt;span class="inputIcon"&gt;&lt;i class="fas fa-key"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1"
+            required&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-2"&gt;
+      &lt;h4&gt;Radio(單選)&lt;/h4&gt;
+      &lt;input type="radio" name="radio" id="radio1" class="radio" /&gt;
+      &lt;label for="radio1"&gt;radio1&lt;/label&gt;
+      &lt;input type="radio" name="radio" id="radio2" class="radio" /&gt;
+      &lt;label for="radio2"&gt;radio2&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-4"&gt;
+      &lt;h4&gt;Checkbox(多選)&lt;/h4&gt;
+      &lt;div class="FormSystem"&gt;
+        &lt;input type="checkbox" name="checkbox1" value="checkbox" class="checkbox"&gt;
+        &lt;label for="checkbox1"&gt;checkbox1&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="FormSystem"&gt;
+        &lt;input type="checkbox" name="checkbox2" value="checkbox" class="checkbox"&gt;
+        &lt;label for="checkbox2"&gt;checkbox2&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="FormSystem"&gt;
+        &lt;input type="checkbox" name="checkbox3" value="checkbox" class="checkbox"&gt;
+        &lt;label for="checkbox3"&gt;checkbox3&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-6"&gt;
+      &lt;h4&gt;Select(下拉選單)&lt;/h4&gt;
+      &lt;div class="form-group"&gt;
+        &lt;select class="form-control" id="exampleFormControlSelect1"&gt;
+          &lt;option&gt;1&lt;/option&gt;
+          &lt;option&gt;2&lt;/option&gt;
+          &lt;option&gt;3&lt;/option&gt;
+          &lt;option&gt;4&lt;/option&gt;
+          &lt;option&gt;5&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-12"&gt;
+      &lt;label for="exampleFormControlTextarea1"&gt;Textarea&lt;/label&gt;
+      &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required&gt;&lt;/textarea&gt;
+      &lt;div class="invalid-feedback"&gt; required &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="FormSystem col-md-12 center"&gt;
+      &lt;button class="btn btnBlue"&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+     </pre>
+							<p class="componentTitle">Text</p>
+							<pre class="preBlack" style="font-weight: bold;">表單加上css：<span class="preRed">FormSystem</span>可成為細灰框樣式</pre>
+							<div class="FormSystem">
+								<h4>文字輸入框</h4>
+								<label for="account">Account</label>
+								<input type="text" id="account2" placeholder="Account" class="form-control" required>
+								<div class="invalid-feedback"> Please choose a username. </div>
+							</div>
+							<pre class="preBlack">
+&lt;div class="FormSystem"&gt;
+&lt;label for="account"&gt;Account&lt;/label&gt;
+&lt;input type="text" id="account2" placeholder="Account" class="form-control" required&gt;
+&lt;div class="invalid-feedback"&gt;
+Please choose a username.
+&lt;/div&gt;
+&lt;/div&gt;
+							</pre>
+
+							<div class="FormSystem">
+								<h4>數字輸入框</h4>
+								<label for="number">Number</label>
+								<input type="number" id="number2" placeholder="Number" class="form-control number" required>
+								<div class="invalid-feedback"> Please choose a number. </div>
+							</div>
+							<pre class="preBlack">
+&lt;div class="FormSystem"&gt;
+&lt;label for="number"&gt;Number&lt;/label&gt;
+&lt;input type="number" id="number" placeholder="Number" class="form-control number" required&gt;
+&lt;div class="invalid-feedback"&gt; Please choose a number. &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+							<div class="FormSystem">
+								<h4>文字輸入框內含按鈕</h4>
+								<div class="input-group">
+									<input type="text" class="form-control" aria-label="Text input with dropdown button" required>
+									<div class="input-group-append">
+										<button class="btn  btnBlue inputButton" type="button"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+							<p>加上class：<span class="preRed">inputButton</span>可成為右方按鈕樣式</p>
+							<p>更改<span class="preRed">&lt;i class="fas fa-search"&gt;&lt;/i&gt;</span>可替換按鈕內的icon</p>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;div class="input-group"&gt;
+&lt;input type="text" class="form-control" aria-label="Text input with dropdown button" required&gt;
+&lt;div class="input-group-append"&gt;
+&lt;button class="btn  btnBlue <span class="preRed">inputButton</span>" type="button"&gt;<span class="preRed">&lt;i class="fas fa-search"&gt;&lt;/i&gt;</span>&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+							</pre>
+							<div class="FormSystem">
+								<h4>文字輸入框+按鈕</h4>
+								<form class="form-inline">
+									<div class="form-group  ">
+										<input type="password" class="form-control" id="inputPassword2" placeholder="輸入密碼">
+									</div>
+									<button type="submit" class="btn btnBlue mx-sm-3">button</button>
+								</form>
+							</div>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;form class="form-inline"&gt;
+&lt;div class="form-group"&gt;
+&lt;input type="password" class="form-control" id="inputPassword2" placeholder="輸入密碼"&gt;
+&lt;/div&gt;
+
+&lt;button type="submit" class="btn btnBlue mx-sm-3"&gt;button&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+							</pre>
+							<div class="FormSystem">
+								<h4>文字輸入框內含icon</h4>
+								<div class="input-group">
+									<div class="input-group-prepend"> <span class="inputIcon"><i class="fas fa-user-alt"></i></span> </div>
+									<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+									 required>
+								</div>
+							</div>
+							<p>加上class：<span class="preRed">inputIcon</span>可成為左方icon樣式</p>
+							<p>更改<span class="preRed">&lt;i class="fas fa-user-alt"&gt;&lt;/i&gt;</span>可替換灰底內的icon</p>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;div class="input-group"&gt;
+&lt;div class="input-group-prepend"&gt; &lt;span class="<span class="preRed">inputIcon</span>"&gt;<span class="preRed"><span class="preRed">&lt;i class="fas fa-user-alt"&gt;&lt;/i</span>&gt;</span>&lt;/span&gt;&lt;/div&gt;
+&lt;input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+							</pre>
+							<p class="componentTitle">Textarea</p>
+							<pre class="preBlack" style="font-weight: bold;">表單加上css：<span class="preRed">FormSystem</span>可成為細灰框樣式</pre>
+							<div class="FormSystem">
+								<label for="exampleFormControlTextarea2">Textarea</label>
+								<textarea class="form-control" id="exampleFormControlTextarea2" rows="3" required></textarea>
+								<div class="invalid-feedback"> required </div>
+							</div>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;label for="exampleFormControlTextarea1"&gt;Textarea&lt;/label&gt;
+&lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required&gt;&lt;/textarea&gt;
+&lt;div class="invalid-feedback"&gt; required &lt;/div&gt;
+&lt;/div&gt;
+										</pre>
+
+							<p class="componentTitle">Include Label</p>
+							<div class="FormSystem">
+								<h4>Radio(單選)</h4>
+								<input type="radio" name="radio" id="radio3" class="radio" />
+								<label for="radio1">radio1</label>
+								<br>
+								<input type="radio" name="radio" id="radio4" class="radio" />
+								<label for="radio2">radio2</label>
+							</div>
+							<p>加上class：<span class="preRed">radio</span>可成為此單選框樣式</p>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;input type="radio" name="radio" id="radio1" class="<span class="preRed">radio</span>"/&gt;
+&lt;label for="radio1"&gt;radio1&lt;/label&gt;
+&lt;br&gt;
+&lt;input type="radio" name="radio" id="radio2" class="<span class="preRed">radio</span>"/&gt;
+&lt;label for="radio2" &gt;radio2&lt;/label&gt;
+&lt;/div&gt;
+										</pre>
+							<div class="FormSystem">
+								<h4>Checkbox(多選)</h4>
+								<input type="checkbox" name="checkbox1" value="checkbox" class="checkbox">
+								checkbox1<br>
+								<input type="checkbox" name="checkbox2" value="checkbox" class="checkbox">
+								checkbox2<br>
+								<input type="checkbox" name="checkbox3" value="checkbox" class="checkbox">
+								checkbox3<br>
+							</div>
+							<p>加上class：<span class="preRed">checkbox</span>可成為此多選框樣式</p>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;input type="checkbox" name="checkbox1" value="checkbox" class="<span class="preRed">checkbox</span>"&gt;
+checkbox1&lt;br&gt;
+&lt;input type="checkbox" name="checkbox2" value="checkbox" class="<span class="preRed">checkbox</span>"&gt;
+checkbox2&lt;br&gt;
+&lt;input type="checkbox" name="checkbox3" value="checkbox" class="<span class="preRed">checkbox</span>"&gt;
+checkbox3&lt;br&gt;
+&lt;/div&gt;</pre>
+							<div class="FormSystem">
+								<h4>Select(下拉選單)</h4>
+								<div class="form-group">
+									<select class="form-control" id="exampleFormControlSelect2">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<pre class="preBlack">
+&lt;div class="<span class="preRed">FormSystem</span>"&gt;
+&lt;div class="form-group"&gt;
+&lt;select class="form-control" id="exampleFormControlSelect1"&gt;
+&lt;option&gt;1&lt;/option&gt;
+&lt;option&gt;2&lt;/option&gt;
+&lt;option&gt;3&lt;/option&gt;
+&lt;option&gt;4&lt;/option&gt;
+&lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+						</section>
+						<section id="mainTable">
+							<h2 class="guideLineTitle">表格</h2>
+							<p>在class中加入<span class="preRed">table-hover</span>可以得到hover效果，加入<span class="preRed">table-responsive-sm</span>可以變成rwd表格</p>
+							<!-- <div class="demo" >Demo</div> -->
+							<table class="table table-hover table-responsive-sm">
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">First</th>
+										<th scope="col">Last</th>
+										<th scope="col">Handle</th>
+										<th scope="col">First</th>
+										<th scope="col">Last</th>
+										<th scope="col">Handle</th>
+										<th scope="col">First</th>
+										<th scope="col">Last</th>
+										<th scope="col">Handle</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry the Bird</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+							<code>
+								<pre class="preBlack">
+&lt;table <span class="preRed">class="table table-hover table-responsive-sm"</span>&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;&lt;/th&gt;
+      &lt;th scope="col"&gt;First&lt;/th&gt;
+      &lt;th scope="col"&gt;Last&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry the Bird&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+    
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre> </code>
+
+						</section>
+						<section id="mainBadge">
+							<h2 class="guideLineTitle">標籤</h2>
+							<!-- <div class="demo" >Demo</div> -->
+							<div class="h3 fontBold">文字旁標籤</div>
+							<p>會根據父元素尺寸做變化</p>
+<div class="exampleWhite">
+								<h1>Example heading <span class="badge ">123</span></h1>
+								<h2>Example heading <span class="badge ">12</span></h2>
+								<h3>Example heading <span class="badge ">1</span></h3>
+								<h4>Example heading <span class="badge ">2</span></h4>
+								<h5>Example heading <span class="badge ">1</span></h5>
+								<h6>Example heading <span class="badge ">1</span></h6>
+							</div>
+							<p>HTML</p>
+							<p>請在想使用的地方加入<code>
+									<span class="preRed">&lt;span class="badge "&gt;123&lt;/span&gt;</span>
+								</code></p>
+							<code>
+								<pre class="preBlack">
+&lt;h1&gt;Example heading <span class="preRed">&lt;span class="badge "&gt;123&lt;/span&gt;</span>&lt;/h1&gt;
+&lt;h2&gt;Example heading <span class="preRed">&lt;span class="badge "&gt;12&lt;/span&gt;</span>&lt;/h2&gt;
+&lt;h3&gt;Example heading <span class="preRed">&lt;span class="badge "&gt;1&lt;/span&gt;</span>&lt;/h3&gt;
+&lt;h4&gt;Example heading <span class="preRed">&lt;span class="badge "&gt;2&lt;/span&gt;</span>&lt;/h4&gt;
+&lt;h5&gt;Example heading <span class="preRed">&lt;span class="badge "&gt;1&lt;/span&gt;</span>&lt;/h5&gt;
+&lt;h6&gt;Example heading <span class="preRed">&lt;span class="badge "&gt;1&lt;/span&gt;</span>&lt;/h6&gt;</pre>
+							</code>
+							<p>也可加在按鈕內</p>
+
+							<button type="button" class="btn btnBlue">
+								button <span class="badge">9</span>
+							</button>
+							<button type="button" class="btn btnWhite">
+								button <span class="badge ">9</span>
+							</button>
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">
+&lt;button type="button" class="btn btnWhite"&gt;
+button <span class="preRed">&lt;span class="badge "&gt;9&lt;/span&gt;</span>
+&lt;/button&gt;</pre>
+							</code>
+						</section>
+						<section id="mainBreadcrumb">
+							<p class="guideLineTitle">麵包屑</p>
+							<p>用<span class="preRed">aria-label="breadcrumb"</span> 來代表這是一個麵包屑 <span class="preRed">aria-current="page"</span>
+								為此群組的最後一個項目，表示這是當前頁面。</p>
+							<div class="exampleWhite">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Library</li>
+									</ol>
+								</nav>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item"><a href="#">Second</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Library</li>
+									</ol>
+								</nav>
+							</div>
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">
+&lt;nav aria-label="breadcrumb"&gt;
+	&lt;ol class="breadcrumb"&gt;
+		&lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="breadcrumb-item active" aria-current="page"&gt;Library&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/nav&gt;</pre>
+							</code>
+						</section>
+						<section id="mainPagination">
+<p class="guideLineTitle">分頁</p>
+<p>用ul、li包裝，若要表示當前頁面請在li加上<span class="preRed">.active</span>的class</p>
+<div class="exampleWhite">
+<ul class="pagination">
+	<li class="page-item"><a class="page-link" href="#"><</a></li>
+	<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item active"><a class="page-link" href="#">2</a></li>
+	<li class="page-item"><a class="page-link" href="#">3</a></li>
+	<li class="page-item"><a class="page-link" href="#">></a></li>
+</ul>
+</div>
+<p>HTML</p>
+<code>
+	<pre class="preBlack">
+&lt;ul class="pagination"&gt;
+	&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;
+			&lt;&lt;/a&gt; &lt;/li&gt; &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+&lt;li class="page-item"&gt;&lt;a class="page-link active" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+	</pre>
+</code>
+<p>若遇到第一頁或最後一頁請在class上加上 <span class="preRed">.disabled</span></p>
+<div class="exampleWhite">
+<ul class="pagination">
+	<li class="page-item disabled"><a class="page-link" href="#"><</a></li>
+	<li class="page-item active"><a class="page-link" href="#">1</a></li>
+	<li class="page-item"><a class="page-link" href="#">2</a></li>
+	<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">...</a></li>
+	<li class="page-item"><a class="page-link" href="#">></a></li>
+</ul>
+</div>
+<code>
+	<pre class="preBlack">
+&lt;ul class="pagination"&gt;
+<span class="preRed">&lt;li class="page-item disabled"&gt;</span>&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt; &lt;/li&gt;
+ &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+	</pre>
+</code>
+						</section>
+						<section id="mainFold">
+
+							<p class="guideLineTitle">摺疊選單</p>
+							<ul class="reportPaperList">
+								<li>Manager Self-Services Reports
+									<ul>
+										<li>
+											HR Workflow Report</li>
+										<li>Travel Expense Control Reports</li>
+									</ul>
+								</li>
+								<li>sdsdsadsadsdsd
+									<ul>
+										<li>HR Workflow Report</li>
+										<li>Travel Expense Control Reports
+											<ul>
+												<li>HR Workflow Report</li>
+												<li>Travel Expense Control Reports
+													<ul>
+														<li>HR Workflow Report</li>
+														<li>Travel Expense Control Reports
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+
+							</ul>
+							<code>
+								<pre class="preBlack">
+&lt;ul class="reportPaperList"&gt;
+	&lt;li&gt;Manager Self-Services Reports
+		&lt;ul&gt;
+			&lt;li&gt;
+				HR Workflow Report&lt;/li&gt;
+			&lt;li&gt;Travel Expense Control Reports&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;sdsdsadsadsdsd
+		&lt;ul&gt;
+			&lt;li&gt;HR Workflow Report&lt;/li&gt;
+			&lt;li&gt;Travel Expense Control Reports
+				&lt;ul&gt;
+					&lt;li&gt;HR Workflow Report&lt;/li&gt;
+					&lt;li&gt;Travel Expense Control Reports
+						&lt;ul&gt;
+							&lt;li&gt;HR Workflow Report&lt;/li&gt;
+							&lt;li&gt;Travel Expense Control Reports
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+							</pre>
+							</code>
+							若在折疊視窗上要顯示彈跳視窗請加上這段
+							<code>$('.theLast').on('click', function () { $('#reportModal').modal('show') })</code>
+						</section>
+						<section id="mainModal">
+							<h2 class="guideLineTitle">彈出視窗</h2>
+							<p class="componentTitle">下載檔案彈出視窗</p>
+							<div class="demo" data-toggle="modal" data-target="#announceModal">Demo</div>
+							<p>HTML tag 屬性<span class="preRed">data-toggle="modal" data-target="#announceModal"</span></p>
+							<code>
+								<pre>
+&lt;button class="btn btnWhite" <span class="preRed">data-toggle="modal" data-target="#announceModal"</span>&gt;下載檔案彈出視窗&lt;/button&gt;
+		</pre>
+							</code>
+							<p>內容</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="modal fade" id="announceModal"&gt;
+	&lt;div class="modal-dialog"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;!-- Modal Header --&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h4 class="modal-title"&gt;Modal Heading&lt;/h4&gt;
+				&lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;!-- Modal body --&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;div class="modalContent"&gt;
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+					standard
+					dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- Modal footer --&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;a href="other/GUI style design of WorkFlow_1017.pptx" download="newfileName"&gt;下載檔案&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</code>
+							<!-- The report Modal -->
+							<div class="modal fade" id="reportModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h3 class="modal-title">Modal Heading</h3>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<ul class="openModalList">
+												<li>報表1 </li>
+												<li>報表2</li>
+												<li>報表3 </li>
+												<li>報表1 </li>
+												<li>報表2</li>
+												<li>報表3 </li>
+												<li>報表1 </li>
+												<li>報表2</li>
+												<li>報表3 </li>
+												<li>報表1 </li>
+												<li>報表2</li>
+												<li>報表3 </li>
+												<li>報表1 </li>
+												<li>報表2</li>
+												<li>報表3 </li>
+												<li>報表1 </li>
+												<li>報表2</li>
+												<li>報表3 </li>
+
+
+											</ul>
+										</div>
+
+										<!-- Modal footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-dismiss="modal"></button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- The announcement Modal -->
+							<div class="modal fade" id="announceModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Modal Heading</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<div class="modalContent">
+												Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+												industry's
+												standard
+												dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+												type
+												specimen
+												book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+												essentially
+												unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+												passages,
+												and
+												more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+											</div>
+										</div>
+
+										<!-- Modal footer -->
+										<div class="modal-footer">
+											<a href="other/GUI style design of WorkFlow_1017.pptx" download="newfileName">下載檔案</a>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<p class="componentTitle">報表彈出視窗</p>
+							<div class="demo" data-toggle="modal" data-target="#reportModal">Demo</div>
+							<p>在HTMltag 上新增屬性 <span class="preRed">data-toggle="modal" data-target="#reportModal"</span>來指定元件</p>
+							<p>例如:</p>
+							<code>
+								<pre>
+&lt;button class="btn btnWhite" <span class="preRed">data-toggle="modal" data-target="#reportModal"</span>&gt;報表彈出視窗&lt;/button&gt;
+		</pre>
+							</code>
+							<p>內容:<span class="preRed"> id </span>需與<span class="preRed">data-target</span> 相符</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="modal fade" id="reportModal"&gt;
+	&lt;div class="modal-dialog"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;!-- Modal Header --&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h4 class="modal-title"&gt;Modal Heading&lt;/h4&gt;
+				&lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;!-- Modal body --&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;ul class="openModalList"&gt;
+					&lt;li&gt;報表1 &lt;/li&gt;
+					&lt;li&gt;報表2&lt;/li&gt;
+					&lt;li&gt;報表3 &lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;!-- Modal footer --&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-danger" data-dismiss="modal"&gt;&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+		</pre>
+							</code>
+
+						</section>
+						<section id="mainAlert">
+							<h2 class="guideLineTitle">Alert</h2>
+							<div class="demo" onclick="alert('這個是範例')">Demo</div>
+							<p>Alert已改為預設樣式，一共有text、yesCallBack與noCallBack，依照需求取用</p>
+
+							<code>
+								<pre>function (text, yesCallback, noCallback) {}</pre>
+							</code>
+							<p>text:alert文字</p>
+							<p>yesCallBack: 按下確定後要觸發的function</p>
+							<p>noCallBack: 按下取消後要觸發的function</p>
+							<p>透過js觸發</p>
+							<code>
+								<pre>$('.alert').alert()</pre></code>
+					
+							<br>
+
+						</section>
+						<section id="mainFileUserSelection">
+							<h2 class="guideLineTitle">彈出視窗選擇組件</h2>
+							<div class="demo" data-toggle="modal" data-target="#fileSelection">Demo</div>
+							<p>選擇組件為單選，透過<span class="preRed">data-target</span>控制開關</p>
+							<p>在HTMltag 上新增屬性 <span class="preRed">data-toggle="modal" data-target="#reportModal"</span>來指定元件</p>
+							<p>例如:</p>
+							<code>
+								<pre>
+&lt;button class="btn btnWhite" <span class="preRed">data-toggle="modal" data-target="#fileSelection"</span>&gt;彈出視窗選擇組件&lt;/button&gt;
+		</pre>
+							</code>
+							<p>內容:</p>
+							<code>
+
+								<pre class="preBlack">
+
+<!-- The  fileSelection Modal -->
+&lt;div class="modal fade modalFileSelection" id="fileSelection"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      <!-- Modal Header -->
+      &lt;div class="modal-header"&gt;
+        &lt;h3 class="modal-title fontBold"&gt;Modal Heading&lt;/h3&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+      &lt;/div&gt;
+      <!-- Modal body -->
+      &lt;div class="modal-body "&gt;
+        &lt;div class="mfsTitle"&gt;
+          &lt;div class="h4 fontBold"&gt;subtitle&lt;/div&gt;
+          &lt;input type="text" class="inputText" placeholder=" Search"  /&gt; &lt;button class="btn btnBlue"&gt;action&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="modalContent"&gt;
+          &lt;ul class="listBox"&gt;
+            &lt;li class="active"&gt;
+              &lt;div class="h4 mfsHeader"&gt;header&lt;/div&gt;
+              &lt;div class="h6"&gt;content&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;div class="h4  mfsHeader"&gt;header&lt;/div&gt;
+              &lt;div class="h6"&gt;content&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;div class="h4  mfsHeader"&gt;header&lt;/div&gt;
+              &lt;div class="h6"&gt;content&lt;/div&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+</pre> </code>
+
+							<!-- The  fileSelection Modal -->
+							<div class="modal fade modalFileSelection" id="fileSelection">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h3 class="modal-title fontBold">Modal Heading</h3>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body ">
+											<div class="mfsTitle">
+												<div class="h4 fontBold">subtitle</div>
+												<input type="text" class="inputText" placeholder=" Search" /> <button class="btn btnBlue">action</button>
+											</div>
+											<div class="modalContent">
+												<ul class="listBox">
+													<li class="active">
+														<div class="h4 mfsHeader">header</div>
+														<div class="h6">content</div>
+													</li>
+													<li>
+														<div class="h4  mfsHeader">header</div>
+														<div class="h6">content</div>
+													</li>
+													<li>
+														<div class="h4  mfsHeader">header</div>
+														<div class="h6">content</div>
+													</li>
+													<li>
+														<div class="h4  mfsHeader">header</div>
+														<div class="h6">content</div>
+													</li>
+													<li>
+														<div class="h4  mfsHeader">header</div>
+														<div class="h6">content</div>
+													</li>
+													<li>
+														<div class="h4  mfsHeader">header</div>
+														<div class="h6">content</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+
+
+									</div>
+								</div>
+							</div>
+
+						</section>
+						<section id="mainModalPanel">
+							<h2 class="guideLineTitle">彈出內含分頁</h2>
+							<div class="demo" data-toggle="modal" data-target="#panelModal">Demo</div>
+							<p>用id做對應，若要多個，請自行新增
+								<span class="preRed">li class="nav-item" </span>與其內容
+							</p>
+							<div class="modal fade" id="panelModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title fontBold">Modal Heading</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<div class="modalContent">
+												<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+													<li class="nav-item">
+														<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+														 aria-selected="true">Home</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+														 aria-selected="false">Profile</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+														 aria-selected="false">Contact</a>
+													</li>
+												</ul>
+												<div class="tab-content" id="myTabContent">
+													<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">內容內容內容</div>
+													<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">.2.內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</div>
+													<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">.3.內容內容內容內容內容內容內容內容內容內容內容內容</div>
+												</div>
+
+											</div>
+										</div>
+										<div class="modal-footer justify-content-center">
+											<div class="btnBlue">active</div>
+										</div>
+
+
+
+									</div>
+								</div>
+
+
+							</div>
+							<p>html</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="demo" data-toggle="modal" data-target="#panelModal"&gt;Demo&lt;/div&gt;</pre>
+							</code>
+							<p>內容</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="modal fade" id="panelModal"&gt;
+&lt;div class="modal-dialog"&gt;
+&lt;div class="modal-content"&gt;
+
+&lt;!-- Modal Header --&gt;
+&lt;div class="modal-header"&gt;
+&lt;h4 class="modal-title fontBold"&gt;Modal Heading&lt;/h4&gt;
+&lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal body --&gt;
+&lt;div class="modal-body"&gt;
+&lt;div class="modalContent"&gt;
+&lt;ul class="nav nav-tabs" id="myTab" role="tablist"&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+aria-selected="true"&gt;Home&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+aria-selected="false"&gt;Profile&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="nav-item"&gt;
+&lt;a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+aria-selected="false"&gt;Contact&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content" id="myTabContent"&gt;
+&lt;div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"&gt;1&lt;/div&gt;
+&lt;div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"&gt;.2.&lt;/div&gt;
+&lt;div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"&gt;.3.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre></code>
+						</section>
+
+						<section id="mainDrag">
+							<h2 class="guideLineTitle">拖拉元件</h2>
+							<div class="componentTitle">拖拉元件-單欄</div>
+							<p>要使用拖拉元件請先引入:</p>
+							<code>
+								<pre>&ltscript src="<span class="preRed">js/jqueryUi.js</span>"&gt&lt/script&gt
+&ltscript src="<span class="preRed">js/jqueryUiTouch.js</span>"&gt&lt/script&gt
+</pre> </code>
+							<p>拖拉元件</p>
+							<ul id="sortable" class="moveable">
+								<li>One </li>
+								<li>Two</li>
+								<li>Three</li>
+								<li>Four</li>
+							</ul>
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">
+&lt;ul id="sortable" class="moveable"&gt;
+	&lt;li&gt;One &lt;/li&gt;
+	&lt;li&gt;Two&lt;/li&gt;
+	&lt;li&gt;Three&lt;/li&gt;
+	&lt;li&gt;Four&lt;/li&gt;
+&lt;/ul&gt;	</pre>
+							</code>
+							<p>js部分</p>
+							<code>
+								<pre class="preBlack">
+	// 拖動事件
+$('#sortable > li').append('&lt;a href="javascript:void(0)"&gt;&lt;i class="far fa-trash-alt liDelete" onclick="deleteThis(this)"&gt;&lt;/i&gt;&lt;/a&gt;')
+$("#sortable").sortable();
+$("#sortable li .liDelete").click(function (event) {
+	//   $("#sortable").stop()
+	deleteThis(event)
+});
+// 刪除事件
+function deleteThis(el) {
+	alert("確定要刪除嗎?", function () {
+		$(el.target).parents("#sortable li").remove();
+	});
+
+}
+</pre>
+							</code>
+							<div class="componentTitle">拖拉元件-雙欄</div>
+							<div class=" d-flex">
+								<div class="sortableBetweenLists">
+									<div class="h3">欄位A</div>
+									<ul id="sortableA" class="moveable connectedSortable">
+
+										<li class="ui-state-default">Item 1</li>
+										<li class="ui-state-default">Item 2</li>
+										<li class="ui-state-default">Item 3</li>
+										<li class="ui-state-default">Item 4</li>
+										<li class="ui-state-default">Item 5</li>
+									</ul>
+								</div>
+								<div class="sortableBetweenLists">
+									<div class="h3">欄位B</div>
+									<ul id="sortableB" class="moveable connectedSortable">
+										<li class="ui-state-highlight">Item 1</li>
+										<li class="ui-state-highlight">Item 2</li>
+										<li class="ui-state-highlight">Item 3</li>
+										<li class="ui-state-highlight">Item 4</li>
+										<li class="ui-state-highlight">Item 5</li>
+									</ul>
+								</div>
+							</div>
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class=" d-flex"&gt;
+	&lt;div class="sortableBetweenLists"&gt;
+		&lt;div class="h3"&gt;欄位A&lt;/div&gt;
+		&lt;ul id="sortableA" class="moveable connectedSortable"&gt;
+
+			&lt;li class="ui-state-default"&gt;Item 1&lt;/li&gt;
+			&lt;li class="ui-state-default"&gt;Item 2&lt;/li&gt;
+			&lt;li class="ui-state-default"&gt;Item 3&lt;/li&gt;
+			&lt;li class="ui-state-default"&gt;Item 4&lt;/li&gt;
+			&lt;li class="ui-state-default"&gt;Item 5&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class="sortableBetweenLists"&gt;
+		&lt;div class="h3"&gt;欄位B&lt;/div&gt;
+		&lt;ul id="sortableB" class="moveable connectedSortable"&gt;
+			&lt;li class="ui-state-highlight"&gt;Item 1&lt;/li&gt;
+			&lt;li class="ui-state-highlight"&gt;Item 2&lt;/li&gt;
+			&lt;li class="ui-state-highlight"&gt;Item 3&lt;/li&gt;
+			&lt;li class="ui-state-highlight"&gt;Item 4&lt;/li&gt;
+			&lt;li class="ui-state-highlight"&gt;Item 5&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+								</pre>
+							</code>
+							<p>js部分</p>
+							<code>
+								<pre class="preBlack">
+(function () {
+// sortable
+$("#sortableA, #sortableB").sortable({
+connectWith: ".connectedSortable"
+}).disableSelection();
+})();
+								</pre>
+							</code>
+						</section>
+
+
+						<section id="mainPanel">
+							<h2 class="guideLineTitle">Panel 文字區塊</h2>
+
+							<p>空白文字區塊，字體大小請依h1~h6做調整</p>
+
+
+							<div class="panel">
+								<div class="h3 panelTitle">標題</div>
+								<div class="panelContent">
+
+									<div class="h4 panelSub">副標</div>
+									<div class="panelText h6">
+										panelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanel
+									</div>
+								</div>
+							</div>
+							<br>
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="panel"&gt;
+	&lt;div class="h3 panelTitle"&gt;標題&lt;/div&gt;
+	&lt;div class="panelContent"&gt;
+		&lt;div class="h4 panelSub"&gt;副標&lt;/div&gt;
+		&lt;div class="panelText h6"&gt;
+			內文
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</code>
+							<br>
+							<div class="componentTitle">核准標籤</div>
+							<p>分為中文與英文，請插在.panel .panelContent 的下方</p>
+							<p>中文</p>
+							<div class="panel">
+								<div class="h3 panelTitle">中文</div>
+								<div class="panelContent">
+									<div class="approvedTw"></div>
+									<div class="h4 panelSub">副標</div>
+									<div class="panelText h6">
+										panelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanel
+									</div>
+								</div>
+							</div>
+							<p>英文</p>
+							<div class="panel">
+								<div class="h3 panelTitle">英文</div>
+								<div class="panelContent">
+									<div class="approved"></div>
+									<div class="h4 panelSub">副標</div>
+									<div class="panelText h6">
+										panelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanelpanellpanelpanelpanelpanelpanelpanelpanelpanel
+									</div>
+								</div>
+							</div>
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="panel"&gt;
+	&lt;div class="h3 panelTitle"&gt;標題&lt;/div&gt;
+&lt;div class="panelContent"&gt;
+<span class="preRed">&lt;div class="approved"&gt;&lt;/div&gt; //英文</span>
+<span class="preRed">&lt;div class="approvedTw"&gt;&lt;/div&gt; //中文</span>
+		&lt;div class="h4 panelSub"&gt;副標&lt;/div&gt;
+		&lt;div class="panelText h6"&gt;
+			內文
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+							</code>
+						</section>
+						<section id="mainTooltip">
+							<h2 class="guideLineTitle">Tooltip</h2>
+							<div class="demo" data-toggle="popover" data-placement="bottom" id="popOver">Demo</div>
+							<div id="popOver-content" class="hidden">
+								<div class="h3">
+									標題
+								</div>
+								<h4>h4h4hh4h4h4</h4>
+							</div>
+							<p>點擊時發揮作用，以id為觸發對象可自行更改名稱，content為觸發內容，content內容可自行編排</p>
+
+
+							<p>HTML</p>
+							<code>
+								<pre class="preBlack">&lt;div  data-toggle="popover" <span class="preRed">data-placement="bottom"</span> id="popOver"&gt;Demo&lt;/div&gt;
+&lt;div id="popOver-content" class="hidden"&gt;
+	&lt;div class="h3"&gt;
+		h3h3h3h3hh33
+	&lt;/div&gt;
+	&lt;h4&gt;h4h4hh4h4h4&lt;/h4&gt;
+&lt;/div&gt;
+</pre></code>
+							<br>
+							<p>JS</p>
+							觸發前請先呼叫
+							<code>
+								<pre class="preBlack">$("#popOver").popover({
+html: true,
+content: function () {
+return $("#popOver-content").html();
+}
+})</pre></code>
+							<br>
+							<p>位置data-placement="" 有四個方向，bottom，top，left，right可自行調整</p>
+						</section>
+						<section id="mainNote">
+							<h2 class="guideLineTitle">Note</h2>
+
+							<p>Note有兩個顏色，黃色與綠色，預設為黃色，請放在mainContent內</p>
+							<div style="position: relative;
+    height: 300px;
+    width: 100%;
+    margin-top: 15px;">
+								<div class="note">
+									<div class="close"><i class="fas fa-times"></i></div>
+									<div class=" noteTitle h3">psofjsdf</div>
+									<div class="noteContent h4">sdfsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdfsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45f45fsdfsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45f45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45f45f</div>
+								</div>
+								<div class="note noteGreen">
+									<div class="close"><i class="fas fa-times"></i></div>
+									<div class=" noteTitle h3">psofjsdf</div>
+									<div class="noteContent h4">sdfsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdfsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45f45fsdfsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45f45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45fsdf45f45f</div>
+								</div>
+							</div>
+							<code>
+								<pre class=" preBlack">
+<span class="preRed">&lt;div class="note" //黃色&gt;
+&lt;div class="note noteGreen" //綠色&gt;</span>
+&lt;div class="close"&gt;&lt;i class="fas fa-times"&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=" noteTitle h3"&gt;psofjsdf&lt;/div&gt;
+&lt;div class="noteContent
+h4"&gt;sdfsdf45fsdf45fsdf45fsdf45fsdf45f45f&lt;/div&gt;
+&lt;/div&gt;
+		</pre>
+							</code>
+
+						</section>
+						<section id="mainFileUpload">
+							<h2 class="guideLineTitle">檔案上傳</h2>
+							<div class="demo" data-toggle="modal" data-target="#fileUpload">Demo</div>
+							<p>檔案上傳</p>
+							<p>在HTMltag 上新增屬性 <span class="preRed">data-toggle="modal" data-target="#fileUpload"</span>來指定元件</p>
+							<p>例如:</p>
+							<code>
+								<pre>
+&lt;button class="btn btnWhite" <span class="preRed">data-toggle="modal" data-target="#fileUpload"</span>&gt;檔案上傳&lt;/button&gt;
+		</pre>
+							</code>
+							<p>內容:</p>
+							<code>
+								<pre class="preBlack">
+
+<!-- The  fileUpload Modal -->
+&lt;div class="modal fade modalFileSelection" id="fileUpload"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h3 class="modal-title fontBold"&gt;Modal Heading&lt;/h3&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body "&gt;
+        &lt;span class="control-fileupload"&gt;
+
+          &lt;form method="post" enctype="multipart/form-data" onsubmit="javascript: return checkupload();"&gt;
+            &lt;!-- &lt;input type="file" name="ufile" id="ufile" multiple=""&gt; --&gt;
+            &lt;label for="ufile" class="btnBlue"&gt;
+              &lt;i class="fa fa-cloud-upload"&gt;&lt;/i&gt; 選擇檔案
+              &lt;input type="file" name="ufile" id="ufile" multiple="" style="display: none" /&gt;
+            &lt;/label&gt;
+          &lt;/form&gt;
+          &lt;ul id="uploadResult"&gt;
+
+          &lt;/ul&gt;
+        &lt;/span&gt;
+
+        &lt;div class="modalContent "&gt;
+
+          &lt;label for="Textarea1" class="h5 fontBold" style="margin:15px 0px"&gt;上傳說明&lt;/label&gt;
+          &lt;textarea class="form-control" id="Textarea1" rows="3" placeholder="這裡放上傳說明"&gt;&lt;/textarea&gt;
+          &lt;div class="center"&gt;
+            &lt;button class="btnBlue " style="width:100px;"&gt;upload&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> </code>
+							<!-- The  fileUpload Modal -->
+							<div class="modal fade modalFileSelection" id="fileUpload">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h3 class="modal-title fontBold">Modal Heading</h3>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body ">
+											<span class="control-fileupload">
+
+												<form method="post" enctype="multipart/form-data" onsubmit="javascript: return checkupload();">
+													<!-- <input type="file" name="ufile" id="ufile" multiple=""> -->
+													<label for="ufile" class="btnBlue">
+														<i class="fa fa-cloud-upload"></i> 選擇檔案
+														<input type="file" name="ufile" id="ufile" multiple="" style="display: none" />
+													</label>
+
+												</form>
+												<ul id="uploadResult">
+
+												</ul>
+											</span>
+
+											<div class="modalContent ">
+
+												<label for="Textarea1" class="h5 fontBold" style="margin:15px 0px">上傳說明</label>
+												<textarea class="form-control" id="Textarea1" rows="3" placeholder="這裡放上傳說明"></textarea>
+												<div class="center">
+													<button class="btnBlue " style="width:100px;">upload</button>
+												</div>
+											</div>
+										</div>
+
+
+
+									</div>
+								</div>
+							</div>
+						</section>
+						<section id="mainTransferBox">
+							<h2 class="guideLineTitle">左右穿梭框</h2>
+							<div class="demo" data-toggle="modal" data-target="#transferBoxModal">Demo</div>
+							<p>清單list可左右移動</p>
+							<p>在HTMltag 上新增屬性 <span class="preRed">data-toggle="modal" data-target="#transferBoxModal"</span>來指定元件</p>
+							<p>例如:</p>
+							<code>
+								<pre class="preBlack">
+<span class="preRed">
+&lt;div class="demo" data-toggle="modal" data-target="#transferBoxModal"&gt;Demo&lt;/div&gt;
+</span></pre></code>
+							<p>內容:</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="modal fade" id="transferBoxModal"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+
+      &lt;!-- Modal Header --&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h4 class="modal-title fontBold"&gt;Modal Heading&lt;/h4&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&times;&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Modal body --&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;div class="modalContent"&gt;
+          &lt;div class="mfsTitle"&gt;
+            &lt;div class="h4 fontBold"&gt;subtitle&lt;/div&gt;
+            &lt;input type="text" class="inputText" placeholder=" Search"  /&gt; &lt;button class="btn btnBlue"&gt;action&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="trandferBoxSection"&gt;
+            &lt;div&gt;
+              &lt;div class="h4 fontBold"&gt;h4title&lt;/div&gt;
+              &lt;select name="leftBoxList" multiple&gt;
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+                &lt;option value="saab"&gt;Saab&lt;/option&gt;
+                &lt;option value="opel"&gt;Opel&lt;/option&gt;
+                &lt;option value="audi"&gt;Audi&lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class="btnInCenter"&gt;
+              &lt;button onclick="leftClick()" class="btnBlue"&gt;&gt;&lt;/button&gt;
+              &lt;button onclick="rightClick()" class="btnBlue"&gt;
+                &lt;&lt;/button&gt; &lt;/div&gt; &lt;div&gt;
+                  &lt;div class="h4 fontBold"&gt;h4title&lt;/div&gt;
+                  &lt;select name="rightBoxList" multiple&gt;
+                    &lt;option value="a"&gt;a&lt;/option&gt;
+                    &lt;option value="b"&gt;b&lt;/option&gt;
+                    &lt;option value="c"&gt;c&lt;/option&gt;
+                    &lt;option value="d"&gt;d&lt;/option&gt;
+                  &lt;/select&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="center"&gt;
+            &lt;button class="btnBlue okBtn"&gt;ok&lt;/button&gt;
+            &lt;button class="btnWhite"&gt;cancel&lt;/button&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> </code>
+							<div class="modal fade" id="transferBoxModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title fontBold">Modal Heading</h4>
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<div class="modalContent">
+												<div class="mfsTitle">
+													<div class="h4 fontBold">subtitle</div>
+													<input type="text" class="inputText" placeholder=" Search" /> <button class="btn btnBlue">action</button>
+												</div>
+												<div class="trandferBoxSection">
+													<div>
+														<div class="h4 fontBold">h4title</div>
+														<select name="leftBoxList" multiple>
+															<option value="volvo">Volvo</option>
+															<option value="saab">Saab</option>
+															<option value="opel">Opel</option>
+															<option value="audi">Audi</option>
+														</select>
+													</div>
+													<div class="btnInCenter">
+														<button onclick="leftClick()" class="btnBlue">></button>
+														<button onclick="rightClick()" class="btnBlue">
+															<</button> </div> <div>
+																<div class="h4 fontBold">h4title</div>
+																<select name="rightBoxList" multiple>
+																	<option value="a">a</option>
+																	<option value="b">b</option>
+																	<option value="c">c</option>
+																	<option value="d">d</option>
+																</select>
+													</div>
+												</div>
+												<div class="center">
+													<button class="btnBlue okBtn">ok</button>
+													<button class="btnWhite">cancel</button>
+												</div>
+
+											</div>
+										</div>
+
+
+
+									</div>
+								</div>
+							</div>
+						</section>
+						<section id="mainDatePicker">
+							<!-- https://uxsolutions.github.io/bootstrap-datepicker/?markup=component&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&maxViewMode=4&todayBtn=false&clearBtn=false&language=en&orientation=auto&multidate=&multidateSeparator=&autoclose=on&todayHighlight=on&keyboardNavigation=on&forceParse=on#sandbox -->
+							<!--更多規則  -->
+							<h2 class="guideLineTitle">時間選擇器</h2>
+							<!-- <div class="demo" >Demo</div> -->
+							<div class="h3 fontBold">單日選擇</div>
+							<div class="input-group date" id="singleDate">
+								<input type="text" class="form-control"><span class="input-group-addon"><i class="far fa-calendar-alt"></i></span>
+							</div>
+							<p>透過更改ID新增不同的日期選擇器</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="input-group date" <span class="preRed">id="singleDate"</span>&gt;
+  &lt;input type="text" class="form-control"&gt;&lt;span class="input-group-addon"&gt;&lt;i class="far fa-calendar-alt"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+</pre> </code>
+							<p>js部分</p>
+							<p>其中.datepicker('update', new Date()為指定預設為今天</p>
+							<code>
+								<pre class="preBlack">
+$("#singleDate").datepicker({
+autoclose: true,
+todayHighlight: true,
+})<span class="preRed">.datepicker('update', new Date());</span>
+</pre> </code>
+
+							<div class="h3 fontBold">區間選擇</div>
+							<div class="input-daterange input-group" id="mutiDate">
+								<input type="text" class="input-sm form-control" name="start" />
+								<span class="input-group-addon">to</span>
+								<input type="text" class="input-sm form-control" name="end" />
+							</div>
+							<br>
+							<p>與單日的不同之處在於html的部分，但同樣透過id做為控制</p>
+							<code>
+								<pre class="preBlack">
+&lt;div class="input-daterange input-group" <span class="preRed">id="mutiDate"</span>&gt;
+	&lt;input type="text" class="input-sm form-control" name="start" /&gt;
+	&lt;span class="input-group-addon"&gt;to&lt;/span&gt;
+	&lt;input type="text" class="input-sm form-control" name="end" /&gt;
+&lt;/div&gt;
+</pre> </code>
+							<p>js部分</p>
+							<code>
+								<pre class="preBlack">
+$("#mutiDate").datepicker({
+autoclose: true,
+todayHighlight: true,
+}).datepicker('update', new Date());
+		</pre>
+							</code>
+
+						</section>
+
+
+
+
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+			<!-- <div class="mainFooter">
+				<div class="font-lg">相關連結</div>
+			<button class="btn btnWhite"><i class="fab fa-windows"></i> office365</button>
+			<button class="btn btnWhite"><i class="fab fa-windows"></i> office365</button>
+			<button class="btn btnWhite"><i class="fab fa-windows"></i> office365</button>
+			<button class="btn btnWhite"><i class="fab fa-windows"></i> office365</button>
+			<br>
+			<hr>
+				<div class="font-sm">liteon </div>
+
+			</div> -->
+		</div>
+
+	</div>
+	<!-- vue -->
+	<script src="js/vue2.5.17.js"></script>
+	<script src="js/vue-scroll-to.js"></script>
+	<script src="js/vueAjax.js"></script>
+	<!-- vue -->
+	<!-- build:js -->
+	<script src="js/tether.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jqueryUi.js"></script>
+	<script src="js/jqueryUiTouch.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/main.js"></script>
+<!-- endbuild:js -->
+	<!-- <script src="js/clipboard.min.js"></script> -->
+	<!-- <script src="js/liteonAll.js"></script> -->
+
+
+</body>
+
+</html>

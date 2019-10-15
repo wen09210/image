@@ -1,0 +1,40 @@
+// buttons
+.btn {
+	cursor: pointer;
+}
+
+.btnWhite {
+	background: #fff;
+	border-radius: 50px;
+	color: $darkBlue;
+	border: 1px solid $darkBlue;
+	margin: 5px 0px;
+	box-shadow: 3px 3px 23px 0 rgba(0, 0, 0, 0.11);
+	padding: 5px 25px;
+	margin: 10px 0px;
+
+	&:hover {
+		background-color: $btnHoverBlue;
+	}
+
+}
+
+
+.btnBlue {
+	background: #095aa6;
+	border-radius: 50px;
+	color: #fff;
+	border: none;
+	padding: 5px 25px;
+	margin: 10px 0px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #074580;
+	}
+}
+
+.okBtn {
+	min-width: 98px;
+	margin-right: 25px;
+}

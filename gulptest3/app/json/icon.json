@@ -1,0 +1,35 @@
+[{
+		"icon": "far fa-calendar-alt",
+		"name": "<i class='far fa-calendar-alt'></i>"
+	},
+	{
+		"icon": "fas fa-user",
+		"name": "<i class='fas fa-user'></i>"
+	},
+	{
+		"icon": "far fa-trash-alt",
+		"name": "<i class='far fa-trash-alt'></i>"
+	},
+	{
+		"icon": "far fa-heart",
+		"name": "<i class='far fa-heart'></i>"
+	},
+	{
+		"icon": "fas fa-exchange-alt",
+		"name": "<i class='fas fa-exchange-alt'></i>"
+	},
+	{
+		"icon": "fab fa-windows",
+		"name": "<i class='fab fa-windows'></i>"
+	},
+	{
+		"icon": "fas fa-chevron-down",
+		"name": "<i class='fas fa-chevron-down'></i>"
+	},{
+		"icon":"fas fa-key",
+		"name":"<i class='fas fa-key'></i>"
+	},{
+		"icon": "fas fa-search",
+		"name":"<i class='fas fa-search'></i>"
+	}
+]

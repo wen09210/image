@@ -1,0 +1,156 @@
+/*report modalHeader */
+.modal-header {
+	background: #e8e8e8;
+	color: #000;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 8px 15px 10px;
+	margin: 1px;
+}
+
+.modal-header button.close {
+	padding: 0;
+	cursor: pointer;
+	background: 0 0;
+	border: 0;
+	color: #3355A1;
+	border-radius: 20px;
+	padding: 0px 3px;
+	font-size: 16px;
+	font-size: 30px;
+	-webkit-appearance: none;
+	font-weight: 100;
+}
+
+.close {
+	text-shadow: none;
+}
+
+.modal-body {
+
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.modal-header button.close:focus,
+.modal-header button.close:hover {}
+
+.modal-dialog {
+	@media (min-width: 576px) {
+		max-width: 750px;
+	}
+}
+
+#reportModal .modal-content {
+	border: 0px;
+}
+
+#reportModal .modal-footer {
+	display: none;
+}
+
+.openModalList li {
+	font-size: 14px;
+	color: #000000;
+	letter-spacing: 0;
+	padding: 10px 0px;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.openModalList li:last-child {
+	border-bottom: 0px;
+}
+
+.liFavorite,
+.liDelete {
+	color: #095AA6;
+	cursor: pointer;
+	float: right;
+	display: inline-block;
+	padding-right: 10px;
+
+}
+
+.liFavorite:hover,
+.loved {
+	font-weight: 900;
+
+}
+/* announceModal */
+.modalContent {
+	font-size: 14px;
+	line-height: 1.5;
+}
+	.mfsTitle {
+		text-align: center;
+	}
+// modal selection
+.modalFileSelection{
+	.modal-body{
+	
+		ul.listBox{
+			display: flex;
+			flex-wrap: wrap;
+			color:$darkBlue;
+			li{
+				width: 18%;
+				text-align: center;
+				border:1px solid $lightBlue;
+				margin:1%;
+				border-radius: 4px;
+				cursor:pointer;
+				&:hover{
+					background-color: $btnHoverBlue;
+					color:$darkBlue;
+				}
+				&.active {
+					background: #042B50;
+					color: $lightGreen;
+				}
+				.mfsHeader{
+					padding:5px 0px 0px;
+				}
+				@include phone-width() {
+					width: 30%;
+					margin:1.5%;
+				}
+			}
+		}
+	}
+}
+// transferBoxSection
+.trandferBoxSection{
+	display: flex;
+	justify-content: center;
+	select[name="leftBoxList"],
+	select[name="rightBoxList"] {
+		width: 300px;
+		height: 220px;
+		    border-radius: 3px;
+			background: #f7f7f7;
+			box-shadow: 1px 1px 1px #ccc inset;
+		@include pad-width{
+			width: 100px;
+		}
+	}
+
+}
+
+.btnInCenter{
+	display: flex;
+	flex-direction: column;
+	    justify-content: center;
+	button{
+		border-radius:4px;
+		padding: 2px 10px;
+		margin: 10px 25px;
+	}
+	
+}
+
+// tab
+.tab-content{
+	min-height: 350px;
+}
